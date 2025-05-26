@@ -7,6 +7,8 @@ var CurrentHealth = 50
 var ElapsedTime = 5 * 60
 var to_add_xp = 0
 var xp_timer = 0
+var wave_timer = 0
+var wave_can_change = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"XpProgressBar0-79".value = 0
@@ -22,6 +24,11 @@ func _process(delta: float) -> void:
 	if xp_timer >= 0.03:
 		xp_timer = 0
 		withdraw_xp()
+	update_wave(ElapsedTime)
+	if not wave_can_change:
+		wave_timer += delta
+		if wave_timer >= 5.0:
+			wave_can_change = true
 	ElapsedTime -= delta
 	xp_timer += delta
 	$TimerLabel.text = sec_To_minsec(ElapsedTime)
@@ -58,7 +65,6 @@ func withdraw_xp():
 		$"XpProgressBar0-79".value += 1
 		to_add_xp -= 1
 	
-
 func _on_hp_demo_slider_slider_value_changed(value: float) -> void:
 	$HpProgressBar.value = value
 	$HP2.text = str(value) + " / " + str(TotalHealth)
@@ -69,6 +75,8 @@ func _on_button_pressed() -> void:
 func sec_To_minsec(sec: int) -> String:
 	var minutes = floor(sec / 60)
 	var seconds = sec - minutes * 60
+	if seconds < 10:
+		return str(minutes) + ":" + "0" + str(seconds)
 	return str(minutes) + ":" + str(seconds)
 
 func damage_effect():
@@ -77,3 +85,10 @@ func damage_effect():
 
 func blood_modulate(value: float):
 	$blood.modulate.a = value
+
+func update_wave(time: int):
+	if not wave_can_change: return
+	
+	if time == 300:
+		wave_can_change = false
+		Globals.start_wave.emit(1)

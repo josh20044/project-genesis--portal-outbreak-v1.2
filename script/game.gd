@@ -11,6 +11,7 @@ var stages = [
 ]
 
 func _ready() -> void:
+	Globals.start_wave.connect(start_wave)
 	Globals.endgame.connect(end)
 	AudioPlayer.stop_bg()
 	if Globals.stage_selected == 1:
@@ -28,10 +29,6 @@ func _ready() -> void:
 	elif Globals.stage_selected == 5:
 		$Stage.add_child(stages[4]["laboratory"])
 		$player.position = Vector2(1500, 500)
-	
-	for i in Globals.forest_spawn_pos:
-		portal_spawn(10, i)
-		print("spawn at :" + str(i))
 
 func _process(delta: float) -> void:
 	pass
@@ -42,13 +39,20 @@ func _on_pause_menu_game_paused() -> void:
 func _on_pause_menu_game_resumed() -> void:
 	get_tree().paused = false
 	
-func portal_spawn(quantity: int, pos: Vector2):
+func portal_spawn(quantity: int, variant: int, pos: Vector2, spawn_speed: float):
 	var portal_inatance = portal.instantiate()
 	portal_inatance.player = $player
 	portal_inatance.position = pos
 	portal_inatance.to_spawn = quantity
-	portal_inatance.spawn_speed = 1.0
+	portal_inatance.variant = variant
+	portal_inatance.spawn_speed = spawn_speed
 	add_child(portal_inatance)
+
+func start_wave(value: int):
+	if value == 1:
+		for i in Globals.forest_spawn_pos:
+			portal_spawn(30, 0, i, 3.0)
+			print("spawn at :" + str(i))
 
 func end():
 	get_tree().paused = false

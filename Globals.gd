@@ -8,6 +8,7 @@ signal reset_enemy
 signal reset_portal
 signal endgame
 signal playbgmusic(index: int)
+signal start_wave(value: int)
 
 var char_selected = ""
 var stage_selected = 0
