@@ -12,7 +12,7 @@ func Exit():
 
 func Update(_delta: float):
 	#print($"../../AnimatedSprite2D".frame)
-	if $"../../AnimatedSprite2D".frame >= 3:
+	if $"../../AnimatedSprite2D".frame >= 15:
 		Globals.xp_increase.emit(10)
 		$"../..".queue_free()
 

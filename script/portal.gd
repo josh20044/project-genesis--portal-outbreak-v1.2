@@ -5,9 +5,8 @@ var enemy = [
 	preload("res://enemy_scene/enemy_test.tscn"),
 	preload("res://enemy_scene/enemy_drone.tscn"),
 	preload("res://enemy_scene/enemy_BringerOfDeath.tscn")
-	
-]
 
+]
 var player: CharacterBody2D
 var to_spawn = 3
 var variant = 0

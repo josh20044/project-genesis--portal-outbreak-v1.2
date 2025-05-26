@@ -9,6 +9,7 @@ var to_add_xp = 0
 var xp_timer = 0
 var wave_timer = 0
 var wave_can_change = true
+var xp_degrade = 1.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$"XpProgressBar0-79".value = 0
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 	if not wave_can_change:
 		wave_timer += delta
 		if wave_timer >= 5.0:
+			wave_timer = 0
 			wave_can_change = true
 	ElapsedTime -= delta
 	xp_timer += delta
@@ -37,6 +39,7 @@ func _process(delta: float) -> void:
 		$"XpProgressBar80-100".value = 0
 		$"Xp Demo Slider".value = 0
 		CurrentLevel += 1
+		xp_degrade -= 0.01
 		$LabelForXPLevel.text = str("LVL: ") + str(CurrentLevel)
 
 	if $HpProgressBar.value <= 0:
@@ -47,7 +50,7 @@ func _on_xp_demo_slider_value_changed(value: float) -> void:
 	$"XpProgressBar80-100".value = value
 	
 func increase_xp(amount: int):
-	to_add_xp += amount
+	to_add_xp += amount * xp_degrade
 
 func attack_recieved(damage: int):
 	$HpProgressBar.value -= damage
@@ -92,3 +95,15 @@ func update_wave(time: int):
 	if time == 300:
 		wave_can_change = false
 		Globals.start_wave.emit(1)
+	if time == 240:
+		wave_can_change = false
+		Globals.start_wave.emit(2)
+	if time == 180:
+		wave_can_change = false
+		Globals.start_wave.emit(3)
+	if time == 120:
+		wave_can_change = false
+		Globals.start_wave.emit(4)
+	if time == 60:
+		wave_can_change = false
+		Globals.start_wave.emit(5)

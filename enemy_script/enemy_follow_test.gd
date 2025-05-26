@@ -1,5 +1,5 @@
 extends State
-class_name enemy_follow_test
+class_name enemy_follow_zombie1
 
 @onready var navigation_agent: NavigationAgent2D = $"../../NavigationAgent2D"
 var target_to_chase: CharacterBody2D

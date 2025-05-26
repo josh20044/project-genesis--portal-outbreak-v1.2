@@ -165,7 +165,7 @@ scale = Vector2(0.765625, 0.671875)
 sprite_frames = SubResource("SpriteFrames_ulb22")
 animation = &"attack"
 autoplay = "slime"
-frame_progress = 0.0427665
+frame_progress = 0.917749
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 18)
