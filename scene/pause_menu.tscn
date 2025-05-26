@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bobsc7t7br6hk"]
 
 [ext_resource type="Script" uid="uid://6l7w3ncqqnne" path="res://script/pause_menu.gd" id="1_grdc7"]
-[ext_resource type="PackedScene" uid="uid://bg0hu8n68vbmm" path="res://scene/settings_paused.tscn" id="2_me6vf"]
+[ext_resource type="PackedScene" uid="uid://cyskb3ty2c78c" path="res://scene/settings.tscn" id="2_me6vf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryxom"]
 
@@ -105,10 +105,12 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_17fpc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xvtxm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xvtxm")
-text = "MAIN MENU"
+text = "END GAME"
 
 [node name="Settings" parent="." instance=ExtResource("2_me6vf")]
 visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

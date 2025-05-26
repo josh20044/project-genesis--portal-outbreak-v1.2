@@ -23,6 +23,7 @@ func move():
 		$"../../AnimatedSprite2D".offset.x = 70
 	else:
 		$"../../AnimatedSprite2D".flip_h = false
+		$"../../AnimatedSprite2D".offset.x = 0
 	navigation_agent.target_position = target_to_chase.global_position
 	$"../..".velocity = $"../..".global_position.direction_to(navigation_agent.get_next_path_position()) * speed
 	$"../..".move_and_slide()

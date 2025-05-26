@@ -19,3 +19,11 @@ func _on_button_pressed() -> void:
 	visible = not visible
 	active = false
 	game_resumed.emit()
+
+func _on_button_2_pressed() -> void:
+	$Settings.visible = true
+
+func _on_button_3_pressed() -> void:
+	Globals.reset_enemy.emit()
+	Globals.reset_portal.emit()
+	get_tree().change_scene_to_file("res://scene/tower_defense_main_menu.tscn")
