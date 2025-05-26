@@ -2,7 +2,8 @@ extends Node2D
 
 var enemy = [
 	preload("res://scene/enemy.tscn"),
-	preload("res://enemy_scene/enemy_test.tscn")
+	preload("res://enemy_scene/enemy_test.tscn"),
+	preload("res://enemy_scene/enemy_drone.tscn")
 ]
 
 var player: CharacterBody2D
@@ -23,7 +24,7 @@ func _process(delta: float) -> void:
 		queue_free()
 	
 func spawn_Enemy():
-	var enemy_instance = enemy[0].instantiate()
+	var enemy_instance = enemy[2].instantiate()
 	var x = rng.randi_range(-70, 70)
 	var y = rng.randi_range(-70, 70)
 	enemy_instance.position = Vector2(position.x + x, position.y + y)

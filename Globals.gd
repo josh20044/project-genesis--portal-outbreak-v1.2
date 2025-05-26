@@ -10,6 +10,7 @@ signal playbgmusic(index: int)
 var char_selected = ""
 var stage_selected = 0
 var enemy_id = 0
+var New
 
 var forest_spawn_pos : Array = [
 	Vector2(500, 700),

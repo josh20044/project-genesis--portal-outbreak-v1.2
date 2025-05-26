@@ -163,9 +163,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_wdqpq")
 [node name="Z" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 602.0
+offset_left = 565.0
 offset_top = 337.0
-offset_right = 789.0
+offset_right = 752.0
 offset_bottom = 536.0
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_hv761")
