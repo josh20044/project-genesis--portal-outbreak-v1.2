@@ -12,8 +12,8 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-	shoot_delay(_delta, 0.1)
-	#shot_gun(_delta, 0.1, 100)
+	#shoot_delay(_delta, 0.1)
+	shot_gun(_delta, 0.1, 10)
 
 
 func Physics_Update(_delta: float):

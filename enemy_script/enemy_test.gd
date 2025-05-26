@@ -23,7 +23,11 @@ func _ready() -> void:
 	$hp.value = hp
 
 func _physics_process(delta: float) -> void:
-	pass
+	if player_in_range:
+		attack_timer += delta
+		if attack_timer >= attack_rate:
+			attack_timer = 0
+			attack_now.emit()
 	
 func hit(_id: int, damage: int):
 	if _id == id:
@@ -45,7 +49,6 @@ func _on_attack_range_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		attack_available = false
 		player_in_range = true
-		attack_now.emit()
 
 func _on_attack_range_body_exited(body: Node2D) -> void:
 	player_in_range = false
