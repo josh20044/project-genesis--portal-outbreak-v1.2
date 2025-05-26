@@ -206,7 +206,6 @@ autoplay = "slime"
 frame_progress = 0.861724
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(2, 7)
 shape = SubResource("CircleShape2D_1e552")
 
@@ -236,7 +235,6 @@ script = ExtResource("6_xxoat")
 script = ExtResource("7_6ra8i")
 
 [node name="attack_range" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
 position = Vector2(2, 7)
