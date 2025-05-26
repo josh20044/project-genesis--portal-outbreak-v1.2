@@ -1,5 +1,5 @@
 extends State
-class_name enemy_follow_test
+class_name enemy_follow_purple_worm
 
 @onready var navigation_agent: NavigationAgent2D = $"../../NavigationAgent2D"
 var target_to_chase: CharacterBody2D
@@ -19,9 +19,9 @@ func Physics_Update(_delta: float):
 
 func move():
 	if target_to_chase.position.x > $"../..".position.x:
-		$"../../AnimatedSprite2D".flip_h = true
-	else:
 		$"../../AnimatedSprite2D".flip_h = false
+	else:
+		$"../../AnimatedSprite2D".flip_h = true
 	navigation_agent.target_position = target_to_chase.global_position
 	$"../..".velocity = $"../..".global_position.direction_to(navigation_agent.get_next_path_position()) * speed
 	$"../..".move_and_slide()

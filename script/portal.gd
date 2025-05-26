@@ -7,7 +7,7 @@ var enemy = [
 
 	preload("res://enemy_scene/enemy_BringerOfDeath.tscn"),
 
-	preload("res://enemy_scene/enemy_Demon_slime.tscn")
+	preload("res://enemy_scene/enemy_purple_worm.tscn")
 
 
 ]
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	
 func spawn_Enemy():
 
-	var enemy_instance = enemy[3].instantiate()
+	var enemy_instance = enemy[4].instantiate()
 
 
 
