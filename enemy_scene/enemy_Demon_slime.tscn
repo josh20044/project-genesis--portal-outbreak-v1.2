@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://q5ajmguxckoo"]
+[gd_scene load_steps=49 format=3 uid="uid://c4e6eko7npa1e"]
 
 [ext_resource type="Script" uid="uid://donq0x5x676iu" path="res://enemy_script/enemy_Demon_slime/enemy_Demon_slime.gd" id="1_j4w8i"]
 [ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_yckti"]
@@ -308,9 +308,8 @@ material = SubResource("ShaderMaterial_b7koy")
 position = Vector2(2, -20)
 scale = Vector2(0.769097, 0.707812)
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"attack"
+animation = &"death"
 autoplay = "slime"
-frame_progress = 0.587836
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 7)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dsah230m7flgt"]
+[gd_scene load_steps=47 format=3 uid="uid://e0gmyuh3vxvo"]
 
 [ext_resource type="Script" uid="uid://crgvmc35cpm18" path="res://enemy_script/enemy_Frost_Guardian/enemy_Frost_Guardian.gd" id="1_eumke"]
 [ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_1yojg"]
@@ -294,9 +294,8 @@ material = SubResource("ShaderMaterial_b7koy")
 position = Vector2(1, 30.125)
 scale = Vector2(0.540365, 0.623047)
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"attack"
+animation = &"death"
 autoplay = "slime"
-frame_progress = 0.629144
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.625, 35)
