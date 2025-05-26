@@ -189,7 +189,7 @@ material = SubResource("ShaderMaterial_b7koy")
 sprite_frames = SubResource("SpriteFrames_ulb22")
 animation = &"attack"
 autoplay = "slime"
-frame_progress = 0.423575
+frame_progress = 0.0485867
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

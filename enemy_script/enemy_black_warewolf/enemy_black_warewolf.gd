@@ -17,6 +17,7 @@ signal attack_now
 
 
 func _ready() -> void:
+	Globals.reset_enemy.connect(suicide)
 	scale = Vector2(0.8, 0.8)
 	attack_timer = attack_rate
 	
@@ -53,3 +54,6 @@ func _on_attack_range_body_entered(body: Node2D) -> void:
 
 func _on_attack_range_body_exited(body: Node2D) -> void:
 	player_in_range = false
+
+func suicide():
+	queue_free()

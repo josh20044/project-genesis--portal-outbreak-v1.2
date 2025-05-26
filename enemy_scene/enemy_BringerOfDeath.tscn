@@ -187,10 +187,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
-radius = 23.0
+radius = 27.0185
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
-radius = 58.0
+radius = 55.0
 
 [node name="Enemy_BringerOfDeath" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
@@ -202,12 +202,12 @@ script = ExtResource("1_6rwd4")
 material = SubResource("ShaderMaterial_b7koy")
 position = Vector2(-35, 15)
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"death"
+animation = &"attack"
 autoplay = "slime"
+frame_progress = 0.30199
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(2, 7)
+position = Vector2(1, 36)
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -236,10 +236,9 @@ script = ExtResource("6_xxoat")
 script = ExtResource("7_6ra8i")
 
 [node name="attack_range" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-position = Vector2(2, 7)
+position = Vector2(1, 36)
 shape = SubResource("CircleShape2D_ulb22")
 debug_color = Color(0.998211, 0, 0.147784, 0.42)
 

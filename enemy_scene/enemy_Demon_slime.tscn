@@ -308,7 +308,7 @@ material = SubResource("ShaderMaterial_b7koy")
 position = Vector2(2, -20)
 scale = Vector2(0.769097, 0.707812)
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"death"
+animation = &"attack"
 autoplay = "slime"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

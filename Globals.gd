@@ -25,35 +25,38 @@ var forest_spawn_pos : Array = [
 ]
 
 var beach_spawn_pos : Array = [
-	Vector2(500, 700),
-	Vector2(2700, 300),
-	Vector2(2000, 1000),
-	Vector2(1600, 2000),
-	Vector2(400, 2100)
+	Vector2(1031, 734),
+	Vector2(2218, 665),
+	Vector2(2805, 1221),
+	Vector2(499, 316),
+	Vector2(944, 1197)
 ]
 
 var waste_spawn_pos : Array = [
-	Vector2(500, 700),
-	Vector2(2700, 300),
-	Vector2(2000, 1000),
-	Vector2(1600, 2000),
-	Vector2(400, 2100)
+	Vector2(3146, 1185),
+	Vector2(1790, 102),
+	Vector2(812, -2131),
+	Vector2(4166, -1785),
+	Vector2(4428, -33)
 ]
 
 var winter_spawn_pos : Array = [
-	Vector2(500, 700),
-	Vector2(2700, 300),
-	Vector2(2000, 1000),
-	Vector2(1600, 2000),
-	Vector2(400, 2100)
+	Vector2(670, -10),
+	Vector2(6010, -26),
+	Vector2(6213, -2688),
+	Vector2(6137, -4852),
+	Vector2(3600, -2550),
+	Vector2(1606, -4520)
 ]
 
 var lab_spawn_pos : Array = [
-	Vector2(500, 700),
-	Vector2(2700, 300),
-	Vector2(2000, 1000),
-	Vector2(1600, 2000),
-	Vector2(400, 2100)
+	Vector2(363, 378),
+	Vector2(282, 2236),
+	Vector2(3738, 2851),
+	Vector2(282, 4453),
+	Vector2(5498, 1171),
+	Vector2(3181, 388),
+	Vector2(2653, 4451)
 ]
 
 func _ready() -> void:
