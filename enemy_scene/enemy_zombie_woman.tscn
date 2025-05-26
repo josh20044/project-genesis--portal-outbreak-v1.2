@@ -1,0 +1,210 @@
+[gd_scene load_steps=30 format=3 uid="uid://cfv0hk62yfbyc"]
+
+[ext_resource type="Script" uid="uid://dinanwde3hmr1" path="res://enemy_script/enemy_zombie_woman/enemy_zombie_woman.gd" id="1_nxds4"]
+[ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_rdly7"]
+[ext_resource type="Texture2D" uid="uid://ya2ddivxdg77" path="res://Genesis Labs Assets/ZOMBIE/Zombie Woman/Attack_1.png" id="2_x23k5"]
+[ext_resource type="Texture2D" uid="uid://b1tnht7whi6eg" path="res://Genesis Labs Assets/ZOMBIE/Zombie Woman/Dead.png" id="3_rh38k"]
+[ext_resource type="Script" uid="uid://rxkqqlm4tj55" path="res://script/state_machine.gd" id="4_036u6"]
+[ext_resource type="Texture2D" uid="uid://b0vuofth4w1ih" path="res://Genesis Labs Assets/ZOMBIE/Zombie Woman/Run.png" id="4_h06ge"]
+[ext_resource type="Script" uid="uid://ce1d2epuoyolj" path="res://enemy_script/enemy_zombie_woman/enemy_follow_zombie_woman.gd" id="7_036u6"]
+[ext_resource type="Script" uid="uid://4r32yg6ocpju" path="res://enemy_script/enemy_zombie_woman/enemy_death_zombie_woman.gd" id="8_8wudb"]
+[ext_resource type="Script" uid="uid://c11oa1w7f8kca" path="res://enemy_script/enemy_zombie_woman/enemy_attack_zombie_woman.gd" id="9_rxhb0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b7koy"]
+resource_local_to_scene = true
+shader = ExtResource("2_rdly7")
+shader_parameter/blink_color = Color(1, 0, 0, 0.486275)
+shader_parameter/blink_intensity = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdly7"]
+atlas = ExtResource("2_x23k5")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxds4"]
+atlas = ExtResource("2_x23k5")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_036u6"]
+atlas = ExtResource("2_x23k5")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wudb"]
+atlas = ExtResource("2_x23k5")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxhb0"]
+atlas = ExtResource("3_rh38k")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a36dp"]
+atlas = ExtResource("3_rh38k")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fkiu"]
+atlas = ExtResource("3_rh38k")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8h5t"]
+atlas = ExtResource("3_rh38k")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mlmf"]
+atlas = ExtResource("3_rh38k")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45gd0"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10uvf"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy6mn"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5blmm"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4pb7"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp6yf"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80d5j"]
+atlas = ExtResource("4_h06ge")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulb22"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdly7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxds4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_036u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wudb")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxhb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a36dp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fkiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8h5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mlmf")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45gd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10uvf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy6mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5blmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4pb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp6yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80d5j")
+}],
+"loop": true,
+"name": &"slime",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
+radius = 21.0238
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
+radius = 29.0172
+
+[node name="Enemy_zombie_woman" type="CharacterBody2D"]
+modulate = Color(1, 0, 0, 1)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_nxds4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_b7koy")
+position = Vector2(2, 10)
+scale = Vector2(0.765625, 0.671875)
+sprite_frames = SubResource("SpriteFrames_ulb22")
+animation = &"attack"
+autoplay = "slime"
+frame_progress = 0.0427665
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 18)
+shape = SubResource("CircleShape2D_1e552")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="hp" type="ProgressBar" parent="."]
+modulate = Color(0.486275, 1, 0.2, 1)
+offset_left = -13.0
+offset_top = -11.0
+offset_right = 19.0
+offset_bottom = -3.0
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initital_state")]
+script = ExtResource("4_036u6")
+initital_state = NodePath("enemy_follow")
+
+[node name="enemy_follow" type="Node" parent="State Machine"]
+script = ExtResource("7_036u6")
+
+[node name="enemy_death" type="Node" parent="State Machine"]
+script = ExtResource("8_8wudb")
+
+[node name="enemy_attack" type="Node" parent="State Machine"]
+script = ExtResource("9_rxhb0")
+
+[node name="attack_range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+position = Vector2(1, 17)
+shape = SubResource("CircleShape2D_ulb22")
+debug_color = Color(0.998211, 0, 0.147784, 0.42)
+
+[connection signal="attack_now" from="." to="State Machine/enemy_follow" method="_on_enemy_attack_now"]
+[connection signal="dead_now" from="." to="State Machine/enemy_follow" method="_on_enemy_dead_now"]
+[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="attack_range" to="." method="_on_attack_range_body_exited"]

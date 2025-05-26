@@ -207,11 +207,7 @@ autoplay = "slime"
 frame_progress = 0.861724
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(2, 13)
-=======
-position = Vector2(2, 7)
->>>>>>> 04138fad8d2997fa4659526edeb5247c6cdcfe81
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
