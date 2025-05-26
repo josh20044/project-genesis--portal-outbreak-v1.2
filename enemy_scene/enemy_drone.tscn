@@ -259,7 +259,7 @@ script = ExtResource("1_jxst1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_b7koy")
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"slime"
+animation = &"attack"
 autoplay = "slime"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
