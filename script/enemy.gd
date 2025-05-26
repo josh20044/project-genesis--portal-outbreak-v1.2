@@ -17,6 +17,7 @@ signal attack_now
 
 
 func _ready() -> void:
+	
 	attack_timer = attack_rate
 	
 	Globals.enemy_hit.connect(hit)

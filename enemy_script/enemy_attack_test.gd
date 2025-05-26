@@ -11,7 +11,6 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-	
 	if $"../../AnimatedSprite2D".frame == 1:
 		if  $"../..".player_in_range and attack_available:
 			Globals.attack_recieved.emit($"../..".damage)
