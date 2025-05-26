@@ -13,7 +13,7 @@ func Exit():
 
 func Update(_delta: float):
 	#shoot_delay(_delta, 0.1)
-	shot_gun(_delta, 0.01, 20)
+	shot_gun(_delta, 0.1, 20)
 
 
 func Physics_Update(_delta: float):

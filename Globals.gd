@@ -14,8 +14,41 @@ var char_selected = ""
 var stage_selected = 0
 var enemy_id = 0
 var New
+var rng = RandomNumberGenerator.new()
 
 var forest_spawn_pos : Array = [
+	Vector2(500, 700),
+	Vector2(2700, 300),
+	Vector2(2000, 1000),
+	Vector2(1600, 2000),
+	Vector2(400, 2100)
+]
+
+var beach_spawn_pos : Array = [
+	Vector2(500, 700),
+	Vector2(2700, 300),
+	Vector2(2000, 1000),
+	Vector2(1600, 2000),
+	Vector2(400, 2100)
+]
+
+var waste_spawn_pos : Array = [
+	Vector2(500, 700),
+	Vector2(2700, 300),
+	Vector2(2000, 1000),
+	Vector2(1600, 2000),
+	Vector2(400, 2100)
+]
+
+var winter_spawn_pos : Array = [
+	Vector2(500, 700),
+	Vector2(2700, 300),
+	Vector2(2000, 1000),
+	Vector2(1600, 2000),
+	Vector2(400, 2100)
+]
+
+var lab_spawn_pos : Array = [
 	Vector2(500, 700),
 	Vector2(2700, 300),
 	Vector2(2000, 1000),
@@ -65,3 +98,6 @@ func Check_file(file_path: String, data: Dictionary):
 			print("Data writtren to the file")
 		else:
 			print("Failed to open or create the file")
+			
+func RandNum(min: int, max: int) -> int:
+	return rng.randi_range(min, max)

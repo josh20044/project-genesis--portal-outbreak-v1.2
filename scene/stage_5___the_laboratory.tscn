@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bublx6opnjlu1"]
+[gd_scene load_steps=26 format=4 uid="uid://bublx6opnjlu1"]
 
 [ext_resource type="Texture2D" uid="uid://csgmbwh8ebncj" path="res://Tile Assets/tiles_laboratory_LandOfPixels/48px/tilesFloor.png" id="1_yun2x"]
 [ext_resource type="Texture2D" uid="uid://b830aancgj0iy" path="res://Tile Assets/tiles_laboratory_LandOfPixels/48px/tilesWalls.png" id="2_x744l"]
@@ -15061,6 +15061,11 @@ sources/1 = SubResource("TileSetAtlasSource_mnjlb")
 sources/3 = SubResource("TileSetAtlasSource_o3xrh")
 sources/4 = SubResource("TileSetAtlasSource_tsdha")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_l8lkw"]
+vertices = PackedVector2Array(-14806, 11308.1, 10877.6, 10982, 16513, 10981.4, 23137.1, 10981.4, 30661.8, 11315.9, 31343.5, 11373.2, -15345.2, 11373.2, 38759.8, 708.563, 62985.8, 672.477, 73095.9, 662.156, 73620.7, 662.156, 73409, 1286.59, 72884.1, 1286.59, 65208.8, 1224.72, 70139.9, 5841.42, 38246.8, 5162.86, 62985.8, 5121.62, 72623.5, 5106.15, 73148.4, 5106.15, 79520.8, 5843.99, 10873.5, 9339.41, 16513, 9334.25, 23137.1, 9334.25, 30661.8, 9934.93, 23137.1, 10027, 16513, 10027, 47778.5, 9872.96, 32105, 9867.81, 32105.1, 9867.81, 30694.3, 4359.23, 30694.3, 5846.5, 10468.9, 5844, -14268.5, 5784.09, 18972.2, 4626.7, 62460.9, 672.477, 48670, 669.898, 48145.2, 669.898, 62460.9, 5121.62, 48393.2, 5121.62, 47868.3, 5121.62, 31812.7, 1342.68, 31968.4, 2193.95, 31876, 2193.95, 6838.55, 2082.48, 6838.55, 1796.98, 31664.5, 1342.68, 65208.8, 4038.97, 73148.4, 3183.17, 79529, 2796.82, 73148.4, 4735.58, 72623.5, 4735.58, 78293.6, -13.2031, 78625, -47.2969, 32115.1, 2255.99, 38503.7, 1780.89, 39028.5, 1780.89, 38702.8, 2954.38, 38177.9, 2954.38, 69814.2, 5965.94, 69473.1, 5994.23, 66104.6, 5970.48, 66104.6, 5932.54, 69814.2, 5908.44, 72623.5, 3183.17, 28470.9, 914.781, 31313.2, 1285.97, 31508.7, 1318.02, 6822.27, 1222.81, 26097.5, 914.781, 19867.6, 914.781, 17494.3, 914.781, 6822.27, 937.313, 65973.3, 6102.36, 65644.4, 6079.72, 65974.3, 6059.31, 6040.52, 6107.65, 5695.26, 6081.63, 6042.95, 6059.13, 77901.7, -13.2031, 73409, 1657.16, 79432.1, -195.93, 73148.4, 2812.6, 77547.6, -47.8906, 73620.7, 291.594, 74749.4, -175.594, 5813.77, 5908.44, 5796.23, 5932.03, 5796.23, 5844, 74754.4, -188.172, 74751.3, -191.102, 77710.2, -196.188, 77698.7, -150.609, 77568.4, -130.008, 37721.9, 5162.86, 31973, 3297.2, 31957.6, 3263.08, 32098.5, 3263.08, 37721.9, 4792.29, 69245.7, -124.641, 69122.9, -148.93, 69146, -191.078, 70498.2, -196.18, 46684.3, 5844, 46700.6, 5900.71, 45547.5, 5900.71, 78512.8, -150.508, 78501.5, -193.672, 78666.9, -123.43, 69267.1, -53.3672, 70498.2, -173.008, 72884.1, 1657.16, 72623.5, 2812.6, 31311.1, 2255.81, 31327.4, 2340.84, 30287, 2338.27, -15357.6, 11310.7, 28475, 338.656, 28475, 94.3984, 31313.2, -198.789, 28418, -196.219, 28418, -160.133, 26101.6, 94.3984, 26150.5, -160.133, 28470.9, 670.523, 69454.8, 6164.68, 69811.3, 6195.44, 69794.8, 6255.81, 6026.58, 5989.17, 6187.1, 5973.94, 38702.8, 3324.95, 44896.2, 1237.63, 44863.4, 4049.29, 38246.8, 4792.29, 38177.9, 3324.95, 39028.5, 1410.32, 30629.2, 6237.75, 30629.2, 7970.02, 23137.1, 8379.83, 23137.1, 7730.91, 29182.2, 6361.37, 30303.7, 3098.06, 6838.55, 2948.6, 6838.55, 2663.09, 47762.2, 9184.72, 31925.9, 9865.23, 31527.2, 9865.23, 31510.9, 9927.16, 26101.6, 338.656, 26097.5, 670.523, 19871.7, 338.656, 19867.6, 670.523, 69928.1, 6255.81, 69911.9, 9128.01, 47868.3, 4751.05, 45460.3, -10.6328, 48145.2, 299.328, 38759.8, 337.992, 45052, -10.6328, 31508.7, 7967.43, 31508.7, 7999.47, 62985.8, 4751.05, 62460.9, 4751.05, 45547.5, 5908.45, 43417.7, 5911, 43417.7, 5900.71, 68912.7, -10.6328, 73095.9, 291.594, 62985.8, 301.906, 68520.6, -10.6328, 16513, 6776.48, 16513, 7730.91, 10889.8, 7725.76, 10889.8, 6771.33, 13838, 6315.1, 10873.5, 8384.98, 16513, 8379.83, -217.148, 2663.09, -217.148, 2948.6, -5376.21, 2944.73, -5376.21, 2659.23, -233.438, 937.313, -233.438, 1222.81, -5376.21, 1793.12, -5392.49, 1218.95, -5392.49, 933.453, -5376.21, 2078.62, -217.148, 1796.98, -217.148, 2082.48, 17783, 6237.76, 21932.3, 6235.19, 21932.3, 6315.1, 17783, 6315.1, 59531.8, -10.6328, 62460.9, 301.906, 48670, 299.328, 59139.8, -10.6328, 10877.6, 10027.6, 4249.38, 9339.41, 4253.45, 10027.6, -1895, 10027, 4253.45, 10982, -1895, 10981.4, -1878.71, 9339.41, 4249.38, 8384.98, -8502.83, 9339.41, -8519.12, 10027, 19831.9, -198.797, 26150.5, -198.797, 19871.7, 94.3984, 19815.6, -157.547, 17498.3, 94.3984, 17551.3, -157.547, 17498.3, 338.656, 17494.3, 670.523, 31508.7, 1285.97, 31968.4, 1315.31, 31968.4, 1285.97, 32115, 1285.97, 32115, -198.797, 32355.5, -198.797, 32355.5, -148.039, 32209, -130, 32209, -50.3594, 32560.4, -10.6328, 33303.9, -130, 33157.3, -148.039, 33157.3, -198.797, 33772.5, -198.797, 33772.5, -170.438, 35649.1, -170.438, 35649.1, -198.797, 37681.2, -198.797, 37681.2, -173.023, 41903.1, -173.023, 41903.1, -198.797, 44863.5, -198.797, 44863.5, -145.609, 44716.9, -130.156, 45811.8, -130.156, 45665.2, -145.609, 45665.2, -198.797, 47062.1, -198.797, 47062.1, -173.023, 51284, -173.023, 51284, -201.383, 53723.2, -201.383, 53723.2, -150.609, 53576.7, -132.57, 54671.6, -127.422, 54525, -145.461, 54525, -201.383, 55921.9, -201.383, 55921.9, -170.43, 57798.5, -173.031, 57798.5, -198.797, 58934.9, -198.797, 58934.9, -148.039, 58788.3, -130, 59883.2, -129.867, 59752.9, -147.906, 59752.9, -201.383, 61133.5, -201.383, 61133.5, -173.023, 65355.4, -173.023, 65355.4, -201.383, 68315.8, -201.383, 68315.8, -148.039, 68169.2, -130, 31508.7, 2193.95, 31508.7, 2255.81, 31313.2, 3265.66, 31508.7, 3265.66, 31508.7, 3295.13, 48393.2, 4751.05, 70139.9, 5908.44, 65730, 5844, 66023.2, 5916.17, 65974.3, 5916.17, 65974.3, 5908.44, 65730, 5908.44, 42277.7, 5900.71, 42277.7, 5844, 32115, 5844, 32115, 4359.23, 31968.4, 4359.23, 31968.4, 4294.79, 31508.7, 4294.79, 31508.7, 4359.23, 10633.3, 6260.97, 10633.3, 6235.19, 13838, 6235.19, 27920.9, 6351.19, 28984.3, 6351.19, 28984.3, 6364.23, 27888.4, 6361.5, 31981, 7967.41, 32095, 7967.41, 32095, 7969.99, 31965.1, 7999.99, 41121.3, 7969.99, 41121.3, 6232.61, 42111.1, 6232.61, 42111.1, 6260.98, 46854.1, 6258.38, 46854.1, 6235.19, 47778.7, 6235.19, 47778.7, 8712.38, 65616, 8714.95, 65616, 6260.97, 65991.8, 6260.97, 47990.5, 9128.01, 47990.5, 9184.72, 31812.6, 8024.13, -1878.71, 8384.98, -15005.2, 6338.79, -15005.2, 6349.23, -15164.3, 6349.23, -15164.3, 6341.5, -15310.9, 6341.5, -15310.9, 6235.19, -14500.3, 6235.19, -14789.7, 6341.63, -14500.3, 6361.62, -14268.8, 6351.19, -13230, 6351.19, -13230, 6361.5, -12737.6, 6361.5, -12737.6, 6351.19, -11666.5, 6351.19, -11666.5, 6361.5, -11452.2, 6235.19, -9598.09, 6235.19, -9598.09, 6315.1, -11468.5, 6361.5, -5669.36, 6315.1, -5669.36, 6232.61, -1520.05, 6232.61, -1520.05, 6315.1, -1882.78, 6770.69, 2424.95, 6315.1, 2424.95, 6235.19, 5613.37, 6235.19, 5613.37, 6260.97, -15328.5, -201.383, 17551.3, -201.383, 25844.7, 6315.1, 25844.7, 6237.75, 27715.1, 6235.2, 27731.4, 6361.5, 31313.2, 3103.2, -12448.2, 933.453, -15350.4, 4053.82, -12448.2, 1218.95, 44716.9, -50.4063, 59883.2, -53, 68169.2, -53, 53576.7, -50.3594, 45811.8, -50.3594, 38234.9, 337.992, 38234.9, 708.563, 31968.4, 2253.4, 54671.6, -50.3594, 58788.3, -50.3594, 54320.1, -10.6328, -8519.12, 10981.4, -14270.5, 6358.82, 38503.7, 1410.32, 33303.9, -50.3594, 9782.67, 6167.31, 10124.7, 6198.23, 10124.7, 6260.97, 4265.67, 6771.33, 66023.2, 5924.8, 10124.7, 5908.44, 10124.7, 5960.92, 9782.67, 5994.44, 29198.5, 6235.2, 23137.1, 6776.48, 65974.3, 5996.25, 31331.4, 11313.3, -8502.83, 8384.98, -8506.9, 7725.11, 10452.6, 5908.44, 6047.89, 5908.44, 32952.4, -10.6328, 6040.52, 6260.97, 31812.5, 3319.79, 31664.5, 3319.79, 31875.9, 4294.79, 31794.3, 4312.86, 31698.9, 4315.37, 31617.6, 4294.79, 31778.4, 2211.99, 31682.6, 2211.99, 31601.2, 2193.95, -12431.9, 2078.62, -12431.9, 2659.23, 18955.3, 4055.06, 31664.5, 8024.13, -1882.78, 7725.11, 4265.67, 7725.76, -8506.9, 6770.69, 53928.1, -10.6328, -12431.9, 1793.12, -12431.9, 2944.73, -14268.5, 4647.94, -15311.3, 4626.7, -15282, 4647.94, -15359.3, 5849.15, -15282, 5784.09, 6187.1, 5938.74)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6), PackedInt32Array(7, 8, 9, 10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23, 24, 25), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33), PackedInt32Array(34, 8, 7), PackedInt32Array(35, 34, 7, 36), PackedInt32Array(37, 16, 15), PackedInt32Array(38, 37, 15), PackedInt32Array(39, 38, 15), PackedInt32Array(40, 41, 42, 43, 44, 45), PackedInt32Array(46, 47, 48, 49, 50), PackedInt32Array(10, 51, 52, 11), PackedInt32Array(53, 54, 55, 56, 57), PackedInt32Array(58, 59, 60, 61, 62), PackedInt32Array(63, 47, 46), PackedInt32Array(64, 65, 66, 67, 68), PackedInt32Array(69, 68, 67), PackedInt32Array(70, 69, 67, 71), PackedInt32Array(72, 73, 74), PackedInt32Array(75, 76, 77), PackedInt32Array(78, 51, 10), PackedInt32Array(79, 80, 48, 47, 81), PackedInt32Array(82, 78, 10, 83, 84), PackedInt32Array(85, 86, 87), PackedInt32Array(88, 89, 90, 91, 92), PackedInt32Array(93, 94, 95, 96, 97), PackedInt32Array(98, 99, 100, 101), PackedInt32Array(102, 103, 104, 15), PackedInt32Array(105, 106, 80, 107), PackedInt32Array(108, 98, 101, 109), PackedInt32Array(88, 92, 82, 84), PackedInt32Array(110, 79, 81, 111), PackedInt32Array(80, 79, 11, 52), PackedInt32Array(112, 113, 114), PackedInt32Array(6, 115, 0), PackedInt32Array(116, 117, 118, 65), PackedInt32Array(119, 118, 117, 120), PackedInt32Array(120, 117, 121, 122), PackedInt32Array(116, 65, 64, 123), PackedInt32Array(124, 125, 126), PackedInt32Array(77, 127, 128), PackedInt32Array(63, 46, 13, 111), PackedInt32Array(48, 19, 18, 49), PackedInt32Array(129, 130, 131, 132), PackedInt32Array(55, 130, 129, 56), PackedInt32Array(60, 59, 124), PackedInt32Array(96, 53, 57, 133, 97), PackedInt32Array(130, 55, 134), PackedInt32Array(23, 4, 3, 24), PackedInt32Array(135, 136, 137, 138, 139), PackedInt32Array(114, 140, 141, 142), PackedInt32Array(143, 26, 28, 144, 22, 137), PackedInt32Array(22, 144, 145), PackedInt32Array(22, 145, 146, 23), PackedInt32Array(147, 116, 123, 148), PackedInt32Array(149, 121, 147, 148, 69, 150), PackedInt32Array(126, 151, 152), PackedInt32Array(153, 39, 15, 132, 131), PackedInt32Array(154, 155, 36, 7, 156, 157), PackedInt32Array(136, 158, 159, 137), PackedInt32Array(50, 17, 16, 160, 46), PackedInt32Array(131, 46, 160, 161), PackedInt32Array(162, 163, 164, 104), PackedInt32Array(165, 166, 9, 8, 167, 168), PackedInt32Array(169, 170, 171, 172, 173), PackedInt32Array(21, 20, 174, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183, 184), PackedInt32Array(185, 186, 187, 179), PackedInt32Array(186, 185, 182, 181, 67), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 34, 35, 194, 195), PackedInt32Array(2, 1, 196, 25), PackedInt32Array(197, 20, 25, 196, 198, 199), PackedInt32Array(198, 200, 201, 199), PackedInt32Array(197, 199, 202, 203), PackedInt32Array(204, 202, 199, 205), PackedInt32Array(206, 207, 122, 121, 208, 209), PackedInt32Array(121, 149, 208), PackedInt32Array(209, 208, 210, 211), PackedInt32Array(148, 68, 69), PackedInt32Array(212, 149, 150, 213), PackedInt32Array(65, 214, 66), PackedInt32Array(215, 216, 217), PackedInt32Array(218, 219, 220, 221), PackedInt32Array(217, 218, 221, 222), PackedInt32Array(217, 222, 223), PackedInt32Array(224, 225, 226, 227, 228), PackedInt32Array(229, 230, 231, 232), PackedInt32Array(233, 234, 235, 236, 237), PackedInt32Array(238, 239, 240, 241, 242), PackedInt32Array(243, 244, 245, 246, 247), PackedInt32Array(248, 249, 250, 251, 252), PackedInt32Array(253, 254, 255, 256, 257), PackedInt32Array(258, 259, 260, 261, 262), PackedInt32Array(263, 264, 265, 266, 267), PackedInt32Array(268, 269, 112), PackedInt32Array(270, 271, 272, 29), PackedInt32Array(161, 37, 38, 273), PackedInt32Array(131, 161, 273), PackedInt32Array(131, 273, 153), PackedInt32Array(133, 129, 132, 97), PackedInt32Array(15, 14, 274, 62, 275), PackedInt32Array(276, 277, 278, 62), PackedInt32Array(278, 279, 275), PackedInt32Array(164, 280, 281), PackedInt32Array(281, 282, 283, 93), PackedInt32Array(283, 284, 285), PackedInt32Array(286, 287, 29), PackedInt32Array(288, 289, 290, 173, 172), PackedInt32Array(291, 292, 293, 294), PackedInt32Array(295, 296, 297, 298), PackedInt32Array(299, 300, 301, 302), PackedInt32Array(303, 304, 305, 306), PackedInt32Array(307, 308, 309, 152), PackedInt32Array(299, 306, 310, 311, 143, 137, 312), PackedInt32Array(203, 202, 313), PackedInt32Array(314, 315, 316, 317), PackedInt32Array(317, 318, 319, 320, 314), PackedInt32Array(321, 314, 320), PackedInt32Array(321, 320, 322, 0), PackedInt32Array(323, 324, 325), PackedInt32Array(326, 327, 328, 329), PackedInt32Array(330, 331, 332, 333), PackedInt32Array(334, 335, 336, 337, 338), PackedInt32Array(339, 340, 341, 342), PackedInt32Array(343, 344, 211, 210), PackedInt32Array(345, 346, 347, 348), PackedInt32Array(343, 213, 70, 71, 180, 184), PackedInt32Array(140, 349, 270, 29), PackedInt32Array(343, 210, 212, 213), PackedInt32Array(343, 184, 350), PackedInt32Array(351, 343, 350, 352), PackedInt32Array(110, 111, 13, 12), PackedInt32Array(233, 237, 353), PackedInt32Array(354, 262, 263, 267, 355, 167, 193, 192), PackedInt32Array(243, 247, 356, 154, 357, 242), PackedInt32Array(232, 358, 359, 53, 360, 41, 217, 229), PackedInt32Array(357, 238, 242), PackedInt32Array(361, 248, 252, 253), PackedInt32Array(354, 258, 262), PackedInt32Array(253, 257, 362, 194, 363), PackedInt32Array(364, 0, 322, 365, 205), PackedInt32Array(366, 54, 53, 359), PackedInt32Array(367, 224, 228), PackedInt32Array(368, 369, 370, 371), PackedInt32Array(61, 372, 276, 62), PackedInt32Array(373, 374, 375), PackedInt32Array(139, 376, 135), PackedInt32Array(293, 139, 138, 377), PackedInt32Array(152, 74, 378, 60, 124, 126), PackedInt32Array(4, 379, 5), PackedInt32Array(200, 1, 0), PackedInt32Array(201, 200, 0, 364), PackedInt32Array(380, 204, 205, 365, 323, 325), PackedInt32Array(380, 325, 326), PackedInt32Array(380, 326, 329), PackedInt32Array(380, 329, 333), PackedInt32Array(380, 333, 332, 381), PackedInt32Array(31, 382, 373, 87), PackedInt32Array(383, 85, 87), PackedInt32Array(72, 74, 152, 309), PackedInt32Array(307, 152, 310, 306), PackedInt32Array(108, 109, 84, 83, 166, 165), PackedInt32Array(217, 223, 384), PackedInt32Array(302, 303, 306, 299), PackedInt32Array(385, 75, 77, 128, 373), PackedInt32Array(52, 107, 80), PackedInt32Array(7, 13, 130), PackedInt32Array(7, 130, 134, 366, 359), PackedInt32Array(217, 384, 367), PackedInt32Array(217, 367, 228, 229), PackedInt32Array(386, 94, 93), PackedInt32Array(294, 293, 377, 348), PackedInt32Array(190, 345, 348, 377, 169), PackedInt32Array(191, 190, 169), PackedInt32Array(173, 191, 169), PackedInt32Array(288, 172, 371, 370), PackedInt32Array(375, 368, 371), PackedInt32Array(387, 386, 93, 283, 285), PackedInt32Array(388, 389, 390, 391, 387), PackedInt32Array(298, 297, 299), PackedInt32Array(187, 43, 268, 112, 114, 142, 176, 179), PackedInt32Array(392, 393, 394, 42), PackedInt32Array(43, 42, 394), PackedInt32Array(43, 394, 268), PackedInt32Array(395, 185, 179, 396), PackedInt32Array(355, 168, 167), PackedInt32Array(362, 195, 194), PackedInt32Array(62, 278, 275), PackedInt32Array(15, 275, 102), PackedInt32Array(15, 104, 164, 281, 93), PackedInt32Array(387, 285, 388), PackedInt32Array(387, 391, 286, 272), PackedInt32Array(272, 286, 29), PackedInt32Array(141, 140, 29, 397, 177), PackedInt32Array(312, 298, 299), PackedInt32Array(398, 312, 137), PackedInt32Array(159, 398, 137), PackedInt32Array(170, 138, 137, 175), PackedInt32Array(399, 400, 170, 175, 174, 203), PackedInt32Array(399, 203, 313), PackedInt32Array(399, 313, 380, 381), PackedInt32Array(401, 381, 332), PackedInt32Array(401, 332, 334, 338), PackedInt32Array(338, 337, 339, 399), PackedInt32Array(399, 339, 342, 385, 371), PackedInt32Array(67, 66, 45, 44, 186), PackedInt32Array(373, 375, 371, 385), PackedInt32Array(154, 356, 402, 194, 155), PackedInt32Array(232, 233, 353, 157, 156, 358), PackedInt32Array(363, 361, 253), PackedInt32Array(402, 363, 194), PackedInt32Array(215, 217, 41), PackedInt32Array(40, 215, 41), PackedInt32Array(183, 182, 403, 352), PackedInt32Array(351, 352, 403, 395), PackedInt32Array(351, 395, 396), PackedInt32Array(351, 396, 404), PackedInt32Array(397, 351, 404, 178, 177), PackedInt32Array(33, 397, 29), PackedInt32Array(33, 32, 405), PackedInt32Array(406, 33, 405, 407), PackedInt32Array(408, 406, 407, 409), PackedInt32Array(87, 408, 409, 32), PackedInt32Array(87, 32, 31), PackedInt32Array(383, 87, 373, 410), PackedInt32Array(128, 410, 373), PackedInt32Array(399, 371, 400), PackedInt32Array(170, 400, 171)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-15890.9, -453.678, 79433.1, -474.3, 79824, 11597.2, -15711.8, 11561.1)])
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a1y8"]
 size = Vector2(144.5, 87)
 
@@ -15199,148 +15204,155 @@ scale = Vector2(0.0614011, 0.38794)
 color = Color(0.52549, 0, 0.372549, 1)
 texture = ExtResource("4_a1bxw")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(988.719, 225)
+scale = Vector2(0.0614011, 0.38794)
+navigation_polygon = SubResource("NavigationPolygon_l8lkw")
 
-[node name="CollisionPolygon2DWall" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegion2D"]
+position = Vector2(-16102.6, -579.987)
+scale = Vector2(16.2864, 2.57772)
+
+[node name="CollisionPolygon2DWall" type="CollisionPolygon2D" parent="NavigationRegion2D/StaticBody2D"]
 polygon = PackedVector2Array(0, 0, 5920, 0, 5920, 4784, 1, 4785, 0, 6, 47, 44, 45.5676, 1801.52, 2152, 1802, 2153, 2016, 48, 2016, 45, 2498, 1344, 2496, 1344, 2538, 1346, 2521, 1360, 2521, 1368, 2532, 1368, 2539, 1358, 2545, 1359, 2572, 1337, 2581, 1338, 2588, 1359, 2598, 1359, 2650, 1334, 2650, 1334, 2640, 1137, 2640, 1137, 2671, 896, 2671, 896, 2639, 640, 2639, 640, 2671, 400, 2671, 400, 2640, 285, 2640, 284, 2689, 273, 2689, 273, 2685, 206, 2685, 206, 2689, 195, 2689, 177, 2689, 177, 2685, 111, 2685, 112, 2688, 99, 2689, 99, 2640, 48, 2640, 48, 2689, 57, 2689, 57, 2692, 68, 2692, 68, 2688, 80, 2689, 79, 4608, 45, 4609, 46, 4641, 2914, 4641, 2913, 4610, 2872, 4611, 2872, 4083, 2924, 4080, 2925, 4056, 2949, 4056, 2960, 4057, 3923, 4059, 3922, 3792, 3936, 3792, 3936, 3770, 5282, 3770, 5283, 2648, 5275, 2648, 5276, 2625, 5254, 2613, 5255, 2554, 5276, 2543, 5276, 2521, 5296, 2521, 5296, 2495, 5872, 2496, 5873, 145, 5808, 146, 5809, 170, 5818, 180, 5816, 203, 5796, 216, 5772, 216, 5751, 203, 5752, 178, 5760, 170, 5761, 145, 5577, 147, 5578, 153, 5318, 154, 5318, 145, 5234, 147, 5232, 170, 5240, 180, 5241, 201, 5220, 217, 5196, 217, 5175, 201, 5175, 178, 5184, 171, 5184, 143, 5001, 143, 5001, 154, 4743, 154, 4743, 143, 4657, 143, 4657, 171, 4665, 178, 4665, 201, 4644, 217, 4620, 217, 4599, 202, 4599, 178, 4608, 171, 4608, 144, 4537, 144, 4537, 154, 4423, 155, 4423, 143, 4336, 143, 4336, 172, 4345, 179, 4345, 202, 4324, 217, 4300, 217, 4279, 202, 4279, 177, 4288, 170, 4288, 143, 4137, 143, 4137, 154, 3879, 154, 3879, 144, 3792, 144, 3792, 172, 3801, 178, 3801, 202, 3780, 217, 3755, 217, 3735, 202, 3735, 178, 3744, 172, 3744, 144, 3561, 144, 3561, 154, 3303, 154, 3303, 144, 3177, 144, 3177, 155, 3063, 155, 3063, 144, 3024, 144, 3024, 171, 3033, 178, 3033, 202, 3012, 217, 2988, 217, 2967, 202, 2967, 178, 2976, 171, 2976, 144, 2960, 144, 2960, 720, 2951, 720, 2951, 732, 2942, 742, 2933, 742, 2924, 733, 2924, 720, 2912, 720, 2912, 144, 2733, 145, 2733, 159, 2595, 159, 2595, 144, 2206, 144, 2205, 160, 2067, 160, 2067, 143, 47, 143, 47, 44, 0, 6)
 
-[node name="CollisionPolygon2DWall2" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2DWall2" type="CollisionPolygon2D" parent="NavigationRegion2D/StaticBody2D"]
 polygon = PackedVector2Array(2870, 2641, 2781, 2640, 2780, 2689, 2769, 2690, 2769, 2685, 2703, 2685, 2701, 2689, 2692, 2689, 2691, 2640, 2575, 2641, 2575, 2671, 2336, 2671, 2336, 2640, 2080, 2641, 2080, 2671, 1839, 2671, 1839, 2640, 1641, 2640, 1641, 2650, 1611, 2650, 1611, 2626, 1590, 2614, 1590, 2554, 1611, 2541, 1611, 2521, 1631, 2521, 1632, 2496, 2912, 2497, 2912, 1920, 2924, 1920, 2924, 1895, 2930, 1895, 2935, 1903, 2941, 1902, 2946, 1895, 2951, 1895, 2951, 1920, 2960, 1920, 2960, 2496, 3584, 2496, 3584, 2518, 3654, 2518, 3654, 2522, 3786, 2521, 3786, 2518, 3857, 2518, 3856, 2496, 5024, 2496, 5024, 2521, 5039, 2521, 5039, 2524, 5042, 2524, 5042, 2527, 5047, 2530, 5047, 2538, 5039, 2548, 5039, 2572, 5016, 2581, 5016, 2586, 5039, 2596, 5040, 2650, 5017, 2650, 5017, 3602, 3923, 3601, 3923, 2640, 3865, 2640, 3865, 2649, 3575, 2650, 3575, 2639, 3513, 2639, 3513, 3313, 2960, 3313, 2960, 3312, 2952, 3312, 2951, 3325, 2942, 3334, 2933, 3334, 2924, 3325, 2924, 3312, 2870, 3313)
 
-[node name="CollisionPolygon2DMidWall" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2DMidWall" type="CollisionPolygon2D" parent="NavigationRegion2D/StaticBody2D"]
 polygon = PackedVector2Array(3746, 709, 4992, 704, 4992, 1788, 3744, 1792)
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2135.75, 532.5)
 shape = SubResource("RectangleShape2D_8a1y8")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2136, 309)
 shape = SubResource("RectangleShape2D_8a1y8")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2664, 532.5)
 shape = SubResource("RectangleShape2D_8a1y8")
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2664.25, 309)
 shape = SubResource("RectangleShape2D_8a1y8")
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3352.5, 428)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(441, 642.5)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1191, 644)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(442, 976)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1192, 977.5)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(442, 1312)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1192, 1313.5)
 shape = SubResource("RectangleShape2D_gkdo7")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(669.75, 3036.75)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1454, 3037)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2206, 3039)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(670, 3663)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1453, 3663)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2206, 3661)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(669, 4300)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(1453.25, 4300.25)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2206, 4300)
 shape = SubResource("RectangleShape2D_g0x8p")
 
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3961, 413)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3369, 844)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(4840, 414)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(5493, 410)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(5480, 796)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3349, 1443)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(5464, 1388)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(5464, 2134)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(4840, 2140)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3944, 2140)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(3321, 2156)
 shape = SubResource("RectangleShape2D_xxj2s")
 
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(81.5, 2248.5)
 shape = SubResource("RectangleShape2D_dq82j")
 
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="NavigationRegion2D/StaticBody2D"]
 position = Vector2(2893, 2208.25)
 shape = SubResource("RectangleShape2D_j62gn")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/StaticBody2D"]
 polygon = PackedVector2Array(2959, 1487, 2950, 1487, 2951, 1501, 2942, 1509, 2933, 1509, 2924, 1500, 2924, 1488, 2912, 1488, 2912, 1425, 2850, 1423, 2849, 1136, 2913, 1137, 2912, 1104, 2924, 1104, 2924, 1080, 2929, 1080, 2934, 1087, 2940, 1087, 2946, 1080, 2951, 1080, 2951, 1103, 2960, 1104)
