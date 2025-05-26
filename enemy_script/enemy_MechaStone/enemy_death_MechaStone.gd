@@ -1,6 +1,5 @@
 extends State
-class_name enemy_death_Demon_slime
-
+class_name enemy_death_MechaStone
 
 
 func Enter():
@@ -13,7 +12,7 @@ func Exit():
 
 func Update(_delta: float):
 	#print($"../../AnimatedSprite2D".frame)
-	if $"../../AnimatedSprite2D".frame >= 15:
+	if $"../../AnimatedSprite2D".frame >= 7:
 		Globals.xp_increase.emit(10)
 		$"../..".queue_free()
 
