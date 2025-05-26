@@ -11,6 +11,7 @@ var stages = [
 ]
 
 func _ready() -> void:
+	Globals.endgame.connect(end)
 	AudioPlayer.stop_bg()
 	if Globals.stage_selected == 1:
 		$Stage.add_child(stages[0]["forest"])
@@ -47,4 +48,8 @@ func portal_spawn(quantity: int, pos: Vector2):
 	portal_inatance.position = pos
 	portal_inatance.to_spawn = quantity
 	portal_inatance.spawn_speed = 1.0
-	get_tree().get_root().add_child(portal_inatance)
+	add_child(portal_inatance)
+
+func end():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scene/tower_defense_main_menu.tscn")

@@ -13,7 +13,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_settings_button_mouse_entered() -> void:
 	$Settings.visible = true
 
@@ -42,22 +41,18 @@ func _on_exit_button_pressed() -> void:
 	AudioPlayer.play_sfx(0)
 	get_tree().quit()
 
-
 func _on_play_button_pressed() -> void:
 	AudioPlayer.play_sfx(0)
 	$SavedDataInterface.visible = true
 	$AnimationPlayer.play("GetDownMisterPresident")
 
-
 func _on_saved_data_interface_data_saved_interface_closed() -> void:
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")
-
 
 func _on_settings_button_pressed() -> void:
 	AudioPlayer.play_sfx(0)
 	$Settings2.visible = true
 	$AnimationPlayer.play("GetDownMisterPresident")
-
 
 func _on_settings_2_settings_closed() -> void:
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")

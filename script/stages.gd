@@ -56,21 +56,17 @@ func _on_next_button_pressed() -> void:
 	current_index = (current_index + 1) % entries.size()
 	update_display()
 
-
 func _on_previous_button_pressed() -> void:
 	current_index = (current_index - 1 + entries.size()) % entries.size()
 	update_display()
-
 
 func _on_back_button_pressed() -> void:
 	$".".visible = false
 	emit_signal("stages_pressed_back")
 
-
 func _on_main_menu_button_pressed() -> void:
 	$".".visible = false
 	Globals.emit_signal("stages_pressed_mainmenu")
-	
 
 func _on_select_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/game.tscn")

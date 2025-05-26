@@ -26,4 +26,4 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	Globals.reset_enemy.emit()
 	Globals.reset_portal.emit()
-	get_tree().change_scene_to_file("res://scene/tower_defense_main_menu.tscn")
+	Globals.endgame.emit()
