@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://du0iqnpcux5hs"]
+[gd_scene load_steps=34 format=3 uid="uid://dvdr32b13mbo"]
 
 [ext_resource type="Script" uid="uid://b8eo4lci7pl6h" path="res://enemy_script/enemy_cthulu/enemy_cthulu.gd" id="1_4okpk"]
 [ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_wp7qg"]
