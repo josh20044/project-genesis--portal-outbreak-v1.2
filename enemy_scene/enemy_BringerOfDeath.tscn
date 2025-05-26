@@ -200,18 +200,15 @@ script = ExtResource("1_6rwd4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_b7koy")
-position = Vector2(-34, -6)
+position = Vector2(-35, 15)
 sprite_frames = SubResource("SpriteFrames_ulb22")
 animation = &"attack"
 autoplay = "slime"
 frame_progress = 0.861724
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-<<<<<<< HEAD
-position = Vector2(2, 13)
-=======
+visible = false
 position = Vector2(2, 7)
->>>>>>> 04138fad8d2997fa4659526edeb5247c6cdcfe81
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -220,12 +217,11 @@ avoidance_enabled = true
 [node name="hp" type="ProgressBar" parent="."]
 modulate = Color(0.486275, 1, 0.2, 1)
 offset_left = -13.0
-offset_top = -21.0
+offset_top = -11.0
 offset_right = 19.0
-offset_bottom = -13.0
+offset_bottom = -3.0
 value = 100.0
 show_percentage = false
-metadata/_edit_use_anchors_ = true
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initital_state")]
 script = ExtResource("4_6ra8i")
@@ -241,9 +237,10 @@ script = ExtResource("6_xxoat")
 script = ExtResource("7_6ra8i")
 
 [node name="attack_range" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-position = Vector2(1, 10)
+position = Vector2(2, 7)
 shape = SubResource("CircleShape2D_ulb22")
 debug_color = Color(0.998211, 0, 0.147784, 0.42)
 

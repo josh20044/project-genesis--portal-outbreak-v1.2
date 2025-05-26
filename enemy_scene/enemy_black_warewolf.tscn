@@ -165,6 +165,7 @@ animation = &"attack"
 autoplay = "slime"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-8, 27)
 shape = SubResource("CircleShape2D_1e552")
 

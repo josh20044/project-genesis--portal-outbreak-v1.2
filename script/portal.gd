@@ -4,11 +4,7 @@ var enemy = [
 	preload("res://scene/enemy.tscn"),
 	preload("res://enemy_scene/enemy_test.tscn"),
 	preload("res://enemy_scene/enemy_drone.tscn"),
-	preload("res://enemy_scene/enemy_BringerOfDeath.tscn"),
-<<<<<<< HEAD
-=======
-	
->>>>>>> 9eb751cddc61d72f5d4e51847a15da4e9d4420b7
+	preload("res://enemy_scene/enemy_gurdian.tscn")
 ]
 
 var player: CharacterBody2D

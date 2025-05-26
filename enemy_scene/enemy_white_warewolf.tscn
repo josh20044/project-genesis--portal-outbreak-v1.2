@@ -40,11 +40,11 @@ region = Rect2(512, 0, 128, 128)
 atlas = ExtResource("3_3r2dm")
 region = Rect2(640, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4u4n8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r2dm"]
 atlas = ExtResource("4_c1dvd")
 region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ay1y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1dvd"]
 atlas = ExtResource("4_c1dvd")
 region = Rect2(128, 0, 128, 128)
 
@@ -111,10 +111,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4u4n8")
+"texture": SubResource("AtlasTexture_3r2dm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ay1y")
+"texture": SubResource("AtlasTexture_c1dvd")
 }],
 "loop": true,
 "name": &"death",
@@ -154,7 +154,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
-radius = 22.0227
+radius = 20.714
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
 radius = 65.0077
@@ -168,11 +168,13 @@ script = ExtResource("1_3r2dm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_b7koy")
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"death"
+animation = &"attack"
 autoplay = "slime"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 30)
+visible = false
+position = Vector2(-3, 30)
+scale = Vector2(-1.88047, 1.98163)
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
