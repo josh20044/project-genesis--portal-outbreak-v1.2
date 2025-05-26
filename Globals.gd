@@ -6,7 +6,7 @@ signal xp_increase(amount: int)
 signal attack_recieved(damage: int)
 signal reset_enemy
 signal reset_portal
-
+signal endgame
 signal playbgmusic(index: int)
 
 var char_selected = ""

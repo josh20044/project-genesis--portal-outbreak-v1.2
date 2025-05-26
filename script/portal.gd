@@ -16,7 +16,7 @@ var spawn_timer = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
-	Globals.reset_portal.connect(suicide)
+	pass
 
 func _process(delta: float) -> void:
 	spawn_timer += delta
@@ -37,6 +37,3 @@ func spawn_Enemy():
 	enemy_instance.id = Globals.enemy_id
 	Globals.enemy_id += 1
 	get_tree().get_root().add_child(enemy_instance)
-
-func suicide():
-	queue_free()

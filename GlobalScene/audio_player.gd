@@ -9,6 +9,7 @@ var sfx_arr = [
 ]
 
 func play_music(music: AudioStream, volume: float):
+	playing = true
 	if stream == music: return
 	stream = music
 	volume_db = volume
