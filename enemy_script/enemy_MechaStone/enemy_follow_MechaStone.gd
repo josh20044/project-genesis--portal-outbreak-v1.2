@@ -1,5 +1,5 @@
 extends State
-class_name enemy_follow_drone
+class_name enemy_follow_MechaStone
 
 @onready var navigation_agent: NavigationAgent2D = $"../../NavigationAgent2D"
 var target_to_chase: CharacterBody2D
@@ -20,7 +20,6 @@ func Physics_Update(_delta: float):
 func move():
 	if target_to_chase.position.x > $"../..".position.x:
 		$"../../AnimatedSprite2D".flip_h = false
-		$"../../AnimatedSprite2D".offset.x = 10
 	else:
 		$"../../AnimatedSprite2D".flip_h = true
 	navigation_agent.target_position = target_to_chase.global_position

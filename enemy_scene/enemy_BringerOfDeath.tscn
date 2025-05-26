@@ -207,12 +207,8 @@ autoplay = "slime"
 frame_progress = 0.861724
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-<<<<<<< HEAD
-position = Vector2(1, 46)
-=======
 visible = false
 position = Vector2(2, 7)
->>>>>>> 08d830fc9982b0660c5b4fb785e64213d950a7cc
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -244,7 +240,7 @@ script = ExtResource("7_6ra8i")
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
-position = Vector2(1, 45)
+position = Vector2(2, 7)
 shape = SubResource("CircleShape2D_ulb22")
 debug_color = Color(0.998211, 0, 0.147784, 0.42)
 
