@@ -2,7 +2,7 @@ extends Control
 
 signal settings_closed
 
-var json_path = "user://data/setting.json"
+var json_path = "user://setting.json"
 
 var save_data : Dictionary = {
 	"music": 0,
@@ -10,6 +10,7 @@ var save_data : Dictionary = {
 	}
 
 func _ready() -> void:
+	Globals.Check_file(json_path, save_data)
 	$Panel/MusicSlider.value = Globals.read_json_file(json_path)["music"]
 	$Panel/SfxSlider.value = Globals.read_json_file(json_path)["sfx"]
 	AudioPlayer.change_bg_volume(Globals.read_json_file(json_path)["music"])

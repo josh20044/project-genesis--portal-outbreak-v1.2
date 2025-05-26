@@ -1,8 +1,10 @@
 extends Control
 
+
 func _ready() -> void:
 	$AnimationPlayer.speed_scale = 3.0
 	$AnimationPlayer.play("DriftZ")
+	
 
 func _process(delta: float) -> void:
 	pass

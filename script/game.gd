@@ -20,10 +20,13 @@ func _ready() -> void:
 		$player.position = Vector2(1500, 500)
 	elif Globals.stage_selected == 3:
 		$Stage.add_child(stages[2]["waste"])
+		$player.position = Vector2(2500, -1300)
 	elif Globals.stage_selected == 4:
 		$Stage.add_child(stages[3]["winter"])
+		$player.position = Vector2(1500, 500)
 	elif Globals.stage_selected == 5:
 		$Stage.add_child(stages[4]["laboratory"])
+		$player.position = Vector2(1500, 500)
 	
 	for i in Globals.forest_spawn_pos:
 		portal_spawn(10, i)

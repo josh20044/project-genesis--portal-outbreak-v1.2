@@ -29,8 +29,6 @@ func play_bgmusic(index: int):
 func read_json_file(file_path: String):
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	
-	assert(file.file_exists(file_path), "File path does not exist")
-	
 	var data = file.get_as_text()
 	var json_object = JSON.new()
 	
@@ -52,3 +50,14 @@ func write_json_file(file_path: String, data: Dictionary):
 		print("Data writtren to the file")
 	else:
 		print("Failed to open or create the file")
+
+func Check_file(file_path: String, data: Dictionary):
+	var file
+	if not FileAccess.file_exists(file_path):
+		file = FileAccess.open(file_path, FileAccess.ModeFlags.WRITE)
+		if file:
+			var text = JSON.stringify(data, "\t")
+			file.store_string(text)
+			print("Data writtren to the file")
+		else:
+			print("Failed to open or create the file")

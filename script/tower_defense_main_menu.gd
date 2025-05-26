@@ -1,7 +1,8 @@
 extends Control
 
 var bg_music_1 = preload("res://Audio/Erika ( German soldier song ) Japanese ver  With Romaji lyrics.mp3")
-var music_save_path = "user://data/setting.json"
+var music_save_path = "user://setting.json"
+
 func _ready() -> void:
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")
 	AudioPlayer.play_music(bg_music_1, Globals.read_json_file(music_save_path)["music"])
