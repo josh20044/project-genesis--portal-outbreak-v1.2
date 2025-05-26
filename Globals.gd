@@ -4,6 +4,8 @@ signal stages_pressed_mainmenu
 signal  enemy_hit(id: int, damage: int)
 signal xp_increase(amount: int)
 signal attack_recieved(damage: int)
+signal reset_enemy
+signal reset_portal
 
 signal playbgmusic(index: int)
 

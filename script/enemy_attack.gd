@@ -17,7 +17,6 @@ func Update(_delta: float):
 		if  $"../..".player_in_range and attack_available:
 			Globals.attack_recieved.emit($"../..".damage)
 			attack_available = false
-			
 
 	if $"../../AnimatedSprite2D".frame >= 3:
 		Transitioned.emit(self, "enemy_follow")

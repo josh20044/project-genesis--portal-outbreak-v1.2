@@ -1,65 +1,65 @@
-[gd_scene load_steps=24 format=3 uid="uid://dos53wexsq3es"]
+[gd_scene load_steps=24 format=3 uid="uid://bylpuct8wx4gb"]
 
-[ext_resource type="Script" uid="uid://bruajv8q4sdju" path="res://enemy_script/enemy_test.gd" id="1_mds2i"]
-[ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_32jnx"]
-[ext_resource type="Texture2D" uid="uid://c6s0gqlm1giqc" path="res://Genesis Labs Assets/SLIME/spritesheet/slime-spritesheet.png" id="3_nifpp"]
-[ext_resource type="Script" uid="uid://rxkqqlm4tj55" path="res://script/state_machine.gd" id="4_5puke"]
-[ext_resource type="Script" uid="uid://dhfoypygupkq5" path="res://enemy_script/enemy_follow_test.gd" id="5_l7vth"]
-[ext_resource type="Script" uid="uid://b6px4plqxjmar" path="res://enemy_script/enemy_death_test.gd" id="6_npn2g"]
-[ext_resource type="Script" uid="uid://bcohmprqivbto" path="res://enemy_script/enemy_attack_test.gd" id="7_2am0x"]
+[ext_resource type="Script" uid="uid://bruajv8q4sdju" path="res://enemy_script/enemy_test.gd" id="1_pwa66"]
+[ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_nxhav"]
+[ext_resource type="Texture2D" uid="uid://c6s0gqlm1giqc" path="res://Genesis Labs Assets/SLIME/spritesheet/slime-spritesheet.png" id="3_7dm5c"]
+[ext_resource type="Script" uid="uid://rxkqqlm4tj55" path="res://script/state_machine.gd" id="4_qw6gu"]
+[ext_resource type="Script" uid="uid://dhfoypygupkq5" path="res://enemy_script/enemy_follow_test.gd" id="5_bbt6e"]
+[ext_resource type="Script" uid="uid://b6px4plqxjmar" path="res://enemy_script/enemy_death_test.gd" id="6_on8p4"]
+[ext_resource type="Script" uid="uid://bcohmprqivbto" path="res://enemy_script/enemy_attack_test.gd" id="7_1muce"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b7koy"]
 resource_local_to_scene = true
-shader = ExtResource("2_32jnx")
+shader = ExtResource("2_nxhav")
 shader_parameter/blink_color = Color(1, 0, 0, 0.486275)
 shader_parameter/blink_intensity = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqle"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw261"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rs6j2"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0n578"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ulb22"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1e552"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgurf"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqmod"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f87vc"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8u16h"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b7koy"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yvcfn"]
-atlas = ExtResource("3_nifpp")
+atlas = ExtResource("3_7dm5c")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ulb22"]
@@ -125,14 +125,13 @@ radius = 15.0
 modulate = Color(1, 0, 0, 1)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("1_mds2i")
+script = ExtResource("1_pwa66")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_b7koy")
 sprite_frames = SubResource("SpriteFrames_ulb22")
-animation = &"slime"
+animation = &"attack"
 autoplay = "slime"
-frame_progress = 0.614236
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -152,17 +151,17 @@ value = 100.0
 show_percentage = false
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initital_state")]
-script = ExtResource("4_5puke")
+script = ExtResource("4_qw6gu")
 initital_state = NodePath("enemy_follow")
 
 [node name="enemy_follow" type="Node" parent="State Machine"]
-script = ExtResource("5_l7vth")
+script = ExtResource("5_bbt6e")
 
 [node name="enemy_death" type="Node" parent="State Machine"]
-script = ExtResource("6_npn2g")
+script = ExtResource("6_on8p4")
 
 [node name="enemy_attack" type="Node" parent="State Machine"]
-script = ExtResource("7_2am0x")
+script = ExtResource("7_1muce")
 
 [node name="attack_range" type="Area2D" parent="."]
 visible = false

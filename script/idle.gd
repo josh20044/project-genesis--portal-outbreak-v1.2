@@ -13,7 +13,7 @@ func Exit():
 
 func Update(_delta: float):
 	#shoot_delay(_delta, 0.1)
-	shot_gun(_delta, 0.1, 10)
+	shot_gun(_delta, 0.01, 20)
 
 
 func Physics_Update(_delta: float):
@@ -23,6 +23,7 @@ func Physics_Update(_delta: float):
 func shoot_delay(_delta: float, rate: float):
 	bullet_timer += _delta
 	if Input.is_action_pressed("left_mouse") and bullet_timer >= rate: 
+		AudioPlayer.play_sfx(2)
 		bullet_timer = 0
 		var bullet_instance = bullet.instantiate()
 		bullet_instance.position = $"../../point".get_global_position()
@@ -35,6 +36,7 @@ func shot_gun(_delta: float, rate: float, amount: int):
 	bullet_timer += _delta
 	if Input.is_action_pressed("left_mouse") and bullet_timer >= rate: 
 		bullet_timer = 0
+		AudioPlayer.play_sfx(2)
 		var arc = amount * 0.1
 		for i in range(amount):
 			var increment = arc / (amount - 1)
