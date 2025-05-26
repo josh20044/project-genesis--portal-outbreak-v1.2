@@ -1,6 +1,6 @@
 extends Control
 
-var json_path = "user://data/setting.json"
+var json_path = "user://setting.json"
 
 var save_data : Dictionary = {"music": 0}
 
