@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://bobsc7t7br6hk"]
+
+[ext_resource type="Script" uid="uid://6l7w3ncqqnne" path="res://script/pause_menu.gd" id="1_grdc7"]
+[ext_resource type="PackedScene" uid="uid://bg0hu8n68vbmm" path="res://scene/settings_paused.tscn" id="2_me6vf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryxom"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvtxm"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pg5w"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svwa3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l41pc"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_17fpc"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_grdc7")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="Label" parent="."]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 161.0
+offset_right = 692.0
+offset_bottom = 184.0
+text = "Pause Menu"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 229.0
+offset_right = 756.0
+offset_bottom = 282.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ryxom")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xvtxm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4pg5w")
+text = "RESUME"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 296.0
+offset_right = 756.0
+offset_bottom = 349.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_svwa3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xvtxm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_l41pc")
+text = "SETTINGS"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 365.0
+offset_right = 756.0
+offset_bottom = 418.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_17fpc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xvtxm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xvtxm")
+text = "MAIN MENU"
+
+[node name="Settings" parent="." instance=ExtResource("2_me6vf")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

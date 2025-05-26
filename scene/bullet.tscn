@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://pjdlrnj7rex0"]
+
+[ext_resource type="Texture2D" uid="uid://bmcl6gedtn110" path="res://extra_img/All_Fire_Bullet_Pixel_16x16_02.png" id="1_qwydi"]
+[ext_resource type="Script" uid="uid://b14mqb4hav66q" path="res://script/bullet.gd" id="1_xw300"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33gv4"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(576, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2rn3"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(592, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsge1"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(608, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xetj4"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(624, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw300"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(96, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2l4i"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(112, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bt1p"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(128, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duwpg"]
+atlas = ExtResource("1_qwydi")
+region = Rect2(144, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgjl7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33gv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2rn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsge1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xetj4")
+}],
+"loop": true,
+"name": &"bullet1",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw300")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2l4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bt1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duwpg")
+}],
+"loop": true,
+"name": &"bullet2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyx2i"]
+size = Vector2(15, 7)
+
+[node name="bullet" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 3
+gravity_scale = 0.0
+script = ExtResource("1_xw300")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wgjl7")
+animation = &"bullet2"
+autoplay = "bullet2"
+frame_progress = 0.789094
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_jyx2i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,213 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyskb3ty2c78c"]
+
+[ext_resource type="Texture2D" uid="uid://cw8ul2t3t06d6" path="res://Icons/close.png" id="1_5me81"]
+[ext_resource type="Script" uid="uid://c6wlrfec7rw2r" path="res://script/settings.gd" id="1_48l82"]
+[ext_resource type="FontFile" uid="uid://dyar6fh26gmft" path="res://Fonts/Inter Extra Bold 800.otf" id="2_dhede"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lbs2"]
+bg_color = Color(0.366595, 0.366595, 0.366594, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihhqw"]
+bg_color = Color(0.172833, 0.172833, 0.172833, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ix2d1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y0nw"]
+bg_color = Color(0, 0.333333, 0.454902, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_caxax"]
+bg_color = Color(0, 0.211765, 0.294118, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ams3"]
+bg_color = Color(0, 0.333333, 0.454902, 0)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0j1xc"]
+bg_color = Color(0.329158, 0.329158, 0.329158, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48l82")
+
+[node name="Panel2" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.5
+offset_top = -171.5
+offset_right = 276.5
+offset_bottom = 171.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1lbs2")
+
+[node name="Back" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -93.5
+offset_right = 255.5
+offset_bottom = 148.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ihhqw")
+
+[node name="ExitButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 14.0
+offset_right = 541.0
+offset_bottom = 62.0
+theme_override_constants/icon_max_width = 30
+theme_override_font_sizes/font_size = 3
+theme_override_icons/icon = ExtResource("1_5me81")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ix2d1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5y0nw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_caxax")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ams3")
+icon_alignment = 1
+
+[node name="Inventory" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 23.0
+offset_right = 148.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_dhede")
+theme_override_font_sizes/font_size = 25
+text = "SETTINGS"
+
+[node name="MusicSliderBack" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -54.5
+offset_right = 234.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0j1xc")
+
+[node name="MusicSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 142.0
+offset_right = 495.0
+offset_bottom = 158.0
+min_value = -50.0
+max_value = 0.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 128.0
+offset_right = 139.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 30
+text = "Music"
+
+[node name="SFXBack" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = 42.5
+offset_right = 234.5
+offset_bottom = 107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0j1xc")
+
+[node name="SfxSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 239.0
+offset_right = 495.0
+offset_bottom = 255.0
+min_value = -50.0
+max_value = 0.0
+value = -10.0
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 222.0
+offset_right = 120.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 30
+text = "SFX"
+
+[connection signal="pressed" from="Panel/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="value_changed" from="Panel/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Panel/SfxSlider" to="." method="_on_sfx_slider_value_changed"]
