@@ -187,9 +187,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
+radius = 23.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
-radius = 15.0
+radius = 58.0
 
 [node name="Enemy_BringerOfDeath" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
@@ -206,7 +207,12 @@ autoplay = "slime"
 frame_progress = 0.861724
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(1, 46)
+=======
+visible = false
+position = Vector2(2, 7)
+>>>>>>> 08d830fc9982b0660c5b4fb785e64213d950a7cc
 shape = SubResource("CircleShape2D_1e552")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
@@ -235,6 +241,7 @@ script = ExtResource("6_xxoat")
 script = ExtResource("7_6ra8i")
 
 [node name="attack_range" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
 position = Vector2(1, 45)

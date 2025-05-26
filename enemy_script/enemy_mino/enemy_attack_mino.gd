@@ -1,5 +1,6 @@
 extends State
-class_name enemy_attack_cthulu
+class_name enemy_attack_mino
+
 
 var attack_available = true
 
@@ -11,13 +12,12 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-	
-	if $"../../AnimatedSprite2D".frame == 3:
+	if $"../../AnimatedSprite2D".frame == 4:
 		if  $"../..".player_in_range and attack_available:
 			Globals.attack_recieved.emit($"../..".damage)
 			attack_available = false
 			
-	if $"../../AnimatedSprite2D".frame >= 8:
+	if $"../../AnimatedSprite2D".frame >= 9:
 		Transitioned.emit(self, "enemy_follow")
 		attack_available = true
 	
