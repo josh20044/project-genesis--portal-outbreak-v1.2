@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://c4e6eko7npa1e"]
+[gd_scene load_steps=49 format=3 uid="uid://q5ajmguxckoo"]
 
 [ext_resource type="Script" uid="uid://donq0x5x676iu" path="res://enemy_script/enemy_Demon_slime/enemy_Demon_slime.gd" id="1_j4w8i"]
 [ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_yckti"]

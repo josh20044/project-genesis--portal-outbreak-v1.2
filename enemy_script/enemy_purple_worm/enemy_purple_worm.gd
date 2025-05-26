@@ -4,7 +4,7 @@ var target_to_chase: CharacterBody2D
 
 var hp = 100
 var damage = 2
-var tag = "enemy_MechaStone"
+var tag = "enemy_purple_worm"
 var id : int = 0
 
 var attack_rate = 1.0
@@ -17,7 +17,6 @@ signal attack_now
 
 
 func _ready() -> void:
-	Globals.reset_enemy.connect(suicide)
 	attack_timer = attack_rate
 	
 	Globals.enemy_hit.connect(hit)
@@ -53,6 +52,3 @@ func _on_attack_range_body_entered(body: Node2D) -> void:
 
 func _on_attack_range_body_exited(body: Node2D) -> void:
 	player_in_range = false
-	
-func suicide():
-	queue_free()

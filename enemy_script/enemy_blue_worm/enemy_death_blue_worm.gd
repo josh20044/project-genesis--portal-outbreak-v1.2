@@ -1,5 +1,5 @@
 extends State
-class_name enemy_death_cthulu
+class_name enemy_death_blue_worm
 
 
 func Enter():
@@ -12,7 +12,7 @@ func Exit():
 
 func Update(_delta: float):
 	#print($"../../AnimatedSprite2D".frame)
-	if $"../../AnimatedSprite2D".frame >= 9:
+	if $"../../AnimatedSprite2D".frame >= 7:
 		Globals.xp_increase.emit(10)
 		$"../..".queue_free()
 

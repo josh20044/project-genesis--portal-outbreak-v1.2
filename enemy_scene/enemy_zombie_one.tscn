@@ -1,0 +1,253 @@
+[gd_scene load_steps=8 format=3 uid="uid://gq517acqbitc"]
+
+[sub_resource type="GDScript" id="GDScript_fcmw5"]
+script/source = "extends CharacterBody2D
+
+var target_to_chase: CharacterBody2D
+
+var hp = 100
+var damage = 2
+var tag = \"enemy_zombie_one\"
+var id : int = 0
+
+var attack_rate = 1.0
+var attack_timer
+var attack_available = true
+var player_in_range = false
+
+signal dead_now
+signal attack_now
+
+
+func _ready() -> void:
+	attack_timer = attack_rate
+	
+	Globals.enemy_hit.connect(hit)
+	$hp.value = hp
+
+func _physics_process(delta: float) -> void:
+	if player_in_range:
+		attack_timer += delta
+		if attack_timer >= attack_rate:
+			attack_timer = 0
+			attack_now.emit()
+	
+func hit(_id: int, damage: int):
+	if _id == id:
+		hp -= damage
+		$hp.value = hp
+		blink()
+	if hp <= 0:
+		dead_now.emit()
+		
+func blink():
+	var tween = get_tree().create_tween()
+	tween.tween_method(SetShader_BlinkIntensity, 1.0, 0.0, 0.2)
+
+func SetShader_BlinkIntensity(value: float):
+	$AnimatedSprite2D.material.set_shader_parameter(\"blink_intensity\", value)
+
+
+func _on_attack_range_body_entered(body: Node2D) -> void:
+	if body.name == \"player\":
+		attack_available = false
+		player_in_range = true
+
+func _on_attack_range_body_exited(body: Node2D) -> void:
+	player_in_range = false
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
+radius = 31.5753
+
+[sub_resource type="GDScript" id="GDScript_1bpa6"]
+script/source = "extends CharacterBody2D
+
+var target_to_chase: CharacterBody2D
+
+var hp = 100
+var damage = 2
+var tag = \"enemy_zombie1\"
+var id : int = 0
+
+var attack_rate = 1.0
+var attack_timer
+var attack_available = true
+var player_in_range = false
+
+signal dead_now
+signal attack_now
+
+
+func _ready() -> void:
+	attack_timer = attack_rate
+	
+	Globals.enemy_hit.connect(hit)
+	$hp.value = hp
+
+func _physics_process(delta: float) -> void:
+	if player_in_range:
+		attack_timer += delta
+		if attack_timer >= attack_rate:
+			attack_timer = 0
+			attack_now.emit()
+	
+func hit(_id: int, damage: int):
+	if _id == id:
+		hp -= damage
+		$hp.value = hp
+		blink()
+	if hp <= 0:
+		dead_now.emit()
+		
+func blink():
+	var tween = get_tree().create_tween()
+	tween.tween_method(SetShader_BlinkIntensity, 1.0, 0.0, 0.2)
+
+func SetShader_BlinkIntensity(value: float):
+	$AnimatedSprite2D.material.set_shader_parameter(\"blink_intensity\", value)
+
+
+func _on_attack_range_body_entered(body: Node2D) -> void:
+	if body.name == \"player\":
+		attack_available = false
+		player_in_range = true
+
+func _on_attack_range_body_exited(body: Node2D) -> void:
+	player_in_range = false
+"
+
+[sub_resource type="GDScript" id="GDScript_hldbo"]
+script/source = "extends State
+class_name enemy_follow_zombie_one
+
+@onready var navigation_agent: NavigationAgent2D = $\"../../NavigationAgent2D\"
+var target_to_chase: CharacterBody2D
+const speed = 180.0
+func Enter():
+	$\"../../AnimatedSprite2D\".play(\"slime\")
+	target_to_chase = $\"../..\".target_to_chase
+
+func Exit():
+	pass
+
+func Update(_delta: float):
+	pass
+
+func Physics_Update(_delta: float):
+	move()
+
+func move():
+	if target_to_chase.position.x > $\"../..\".position.x:
+		$\"../../AnimatedSprite2D\".flip_h = true
+	else:
+		$\"../../AnimatedSprite2D\".flip_h = false
+	navigation_agent.target_position = target_to_chase.global_position
+	$\"../..\".velocity = $\"../..\".global_position.direction_to(navigation_agent.get_next_path_position()) * speed
+	$\"../..\".move_and_slide()
+
+func _on_enemy_dead_now() -> void:
+	Transitioned.emit(self, \"enemy_death\")
+
+func _on_enemy_attack_now() -> void:
+	Transitioned.emit(self, \"enemy_attack\")
+"
+
+[sub_resource type="GDScript" id="GDScript_r81fg"]
+script/source = "extends State
+class_name enemy_death_zombie_one
+
+
+func Enter():
+	$\"../../AnimatedSprite2D\".play(\"death\")
+	$\"../..\".collision_mask = 0
+	$\"../..\".collision_layer = 0
+
+func Exit():
+	pass
+
+func Update(_delta: float):
+	#print($\"../../AnimatedSprite2D\".frame)
+	if $\"../../AnimatedSprite2D\".frame >= 4:
+		Globals.xp_increase.emit(10)
+		$\"../..\".queue_free()
+
+func Physics_Update(_delta: float):
+	pass
+"
+
+[sub_resource type="GDScript" id="GDScript_huryl"]
+script/source = "extends State
+class_name enemy_attack_zombie_one
+
+var attack_available = true
+
+func Enter():
+	attack_available = true
+	$\"../../AnimatedSprite2D\".play(\"attack\")
+
+func Exit():
+	pass
+
+func Update(_delta: float):
+	if $\"../../AnimatedSprite2D\".frame == 2:
+		if  $\"../..\".player_in_range and attack_available:
+			Globals.attack_recieved.emit($\"../..\".damage)
+			attack_available = false
+			
+	if $\"../../AnimatedSprite2D\".frame >= 3:
+		Transitioned.emit(self, \"enemy_follow\")
+		attack_available = true
+	
+func Physics_Update(_delta: float):
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
+radius = 48.6004
+
+[node name="Enemy_zombie_one" type="CharacterBody2D"]
+modulate = Color(1, 0, 0, 1)
+collision_layer = 2
+collision_mask = 2
+script = SubResource("GDScript_fcmw5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 34)
+shape = SubResource("CircleShape2D_1e552")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+
+[node name="hp" type="ProgressBar" parent="."]
+modulate = Color(0.486275, 1, 0.2, 1)
+offset_left = -13.0
+offset_top = -11.0
+offset_right = 19.0
+offset_bottom = -3.0
+value = 100.0
+show_percentage = false
+
+[node name="State Machine" type="Node" parent="."]
+script = SubResource("GDScript_1bpa6")
+
+[node name="enemy_follow" type="Node" parent="State Machine"]
+script = SubResource("GDScript_hldbo")
+
+[node name="enemy_death" type="Node" parent="State Machine"]
+script = SubResource("GDScript_r81fg")
+
+[node name="enemy_attack" type="Node" parent="State Machine"]
+script = SubResource("GDScript_huryl")
+
+[node name="attack_range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+position = Vector2(4, 33)
+shape = SubResource("CircleShape2D_ulb22")
+debug_color = Color(0.998211, 0, 0.147784, 0.42)
+
+[connection signal="attack_now" from="." to="State Machine/enemy_follow" method="_on_enemy_attack_now"]
+[connection signal="dead_now" from="." to="State Machine/enemy_follow" method="_on_enemy_dead_now"]
+[connection signal="body_entered" from="attack_range" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="attack_range" to="." method="_on_attack_range_body_exited"]

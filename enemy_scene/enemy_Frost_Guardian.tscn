@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://e0gmyuh3vxvo"]
+[gd_scene load_steps=47 format=3 uid="uid://dsah230m7flgt"]
 
 [ext_resource type="Script" uid="uid://crgvmc35cpm18" path="res://enemy_script/enemy_Frost_Guardian/enemy_Frost_Guardian.gd" id="1_eumke"]
 [ext_resource type="Shader" uid="uid://0rkammlwqtc4" path="res://shader/enemy.gdshader" id="2_1yojg"]
