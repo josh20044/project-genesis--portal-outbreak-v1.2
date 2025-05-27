@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c6eyxf67six6b"]
+[gd_scene load_steps=24 format=3 uid="uid://c6eyxf67six6b"]
 
 [ext_resource type="Script" uid="uid://c2k4pfaso6hbr" path="res://script/tower_defense_main_menu.gd" id="1_34mdo"]
 [ext_resource type="Texture2D" uid="uid://cdceikffnbx6g" path="res://Icons/settings.png" id="1_ivcbp"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dw3dcinyneec7" path="res://scene/saved_data_interface.tscn" id="6_j3rf8"]
 [ext_resource type="PackedScene" uid="uid://cyskb3ty2c78c" path="res://scene/settings.tscn" id="7_awfu6"]
 [ext_resource type="PackedScene" uid="uid://ds4ktts3q3dxf" path="res://scene/shop.tscn" id="10_476cf"]
+[ext_resource type="PackedScene" uid="uid://5xw3aagaogmt" path="res://scene/pointer.tscn" id="11_1arb8"]
+[ext_resource type="PackedScene" uid="uid://c4na2vdl5aun3" path="res://scene/inventory.tscn" id="12_i0jb5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq1nn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -234,9 +236,9 @@ script = ExtResource("1_34mdo")
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
-offset_left = 503.0
+offset_left = 423.0
 offset_top = 574.0
-offset_right = 571.0
+offset_right = 491.0
 offset_bottom = 638.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3
@@ -294,9 +296,9 @@ icon_alignment = 1
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 709.0
+offset_left = 789.0
 offset_top = 575.0
-offset_right = 777.0
+offset_right = 857.0
 offset_bottom = 639.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3
@@ -419,6 +421,13 @@ offset_bottom = 147.0
 text = "	Meron na inventory ui di ko lang alam pano lagay in game tsaka dyan HAHAHA"
 autowrap_mode = 2
 
+[node name="Pointer" parent="." instance=ExtResource("11_1arb8")]
+position = Vector2(1672, 169)
+
+[node name="Inventory2" parent="." instance=ExtResource("12_i0jb5")]
+visible = false
+layout_mode = 1
+
 [connection signal="mouse_entered" from="SettingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="SettingsButton" to="." method="_on_settings_button_mouse_exited"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
@@ -437,3 +446,4 @@ autowrap_mode = 2
 [connection signal="data_saved_interface_closed" from="SavedDataInterface" to="." method="_on_saved_data_interface_data_saved_interface_closed"]
 [connection signal="settings_closed" from="Settings2" to="." method="_on_settings_2_settings_closed"]
 [connection signal="shop_closed" from="Shop2" to="." method="_on_shop_2_shop_closed"]
+[connection signal="inventory_close" from="Inventory2" to="." method="_on_inventory_2_inventory_close"]

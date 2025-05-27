@@ -45,7 +45,7 @@ func _on_body_entered(body: Node) -> void:
 	if "tag" in body:
 		if "id" in body:
 			#print(body.tag + " " + str(body.id))
-			Globals.enemy_hit.emit(body.id, Globals.player_damage)
+			Globals.enemy_hit.emit(body.id, (Globals.player_damage * Globals.damage_degrade))
 		if body.tag == "bullet":
 			return
 	queue_free()

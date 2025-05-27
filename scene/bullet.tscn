@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://pjdlrnj7rex0"]
+[gd_scene load_steps=22 format=3 uid="uid://pjdlrnj7rex0"]
 
 [ext_resource type="Texture2D" uid="uid://bmcl6gedtn110" path="res://extra_img/All_Fire_Bullet_Pixel_16x16_02.png" id="1_qwydi"]
 [ext_resource type="Script" uid="uid://b14mqb4hav66q" path="res://script/bullet.gd" id="1_xw300"]
+[ext_resource type="Texture2D" uid="uid://b0vemd7ov8i3w" path="res://extra_img/All_Fire_Bullet_Pixel_16x16_05.png" id="3_m2l4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33gv4"]
 atlas = ExtResource("1_qwydi")
@@ -50,6 +51,22 @@ region = Rect2(128, 144, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgjbn"]
 atlas = ExtResource("1_qwydi")
 region = Rect2(144, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0n71"]
+atlas = ExtResource("3_m2l4i")
+region = Rect2(256, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x3it"]
+atlas = ExtResource("3_m2l4i")
+region = Rect2(272, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmyn5"]
+atlas = ExtResource("3_m2l4i")
+region = Rect2(288, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhmt7"]
+atlas = ExtResource("3_m2l4i")
+region = Rect2(304, 64, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wgjl7"]
 animations = [{
@@ -103,6 +120,23 @@ animations = [{
 "loop": true,
 "name": &"bullet3",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0n71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x3it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmyn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhmt7")
+}],
+"loop": true,
+"name": &"bullet4",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyx2i"]
@@ -117,9 +151,9 @@ script = ExtResource("1_xw300")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_wgjl7")
-animation = &"bullet3"
-autoplay = "bullet3"
-frame_progress = 0.341636
+animation = &"bullet4"
+autoplay = "bullet4"
+frame_progress = 0.623553
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)

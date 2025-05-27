@@ -9,12 +9,14 @@ signal reset_enemy
 signal reset_portal
 signal reset_coin
 signal reset_xp
+signal reset_potion
 signal endgame
 signal playbgmusic(index: int)
 signal start_wave(value: int)
 signal stage_finished
 signal game_over
 signal level_up
+signal pickup_item(tag: String)
 
 signal game_paused
 signal game_resumed
@@ -31,13 +33,19 @@ var score = 0
 var player_damage = 50
 var shot_gun_mode = false
 var shot_gun_bullet = 2
-var gun_fire_rate = 0.5
+var gun_fire_rate = 0.2
 var regen_amount = 1
 var player_speed = 200
 
+var damage_degrade = 1.0
+
+var inventory_items = []
+var inventory_anim = []
+var inventory_desc = []
+
 var xp = preload("res://scene/xp_drop.tscn")
 var coin = preload("res://scene/coin_drop.tscn")
-
+var potion = preload("res://enemy_scene/potion_drop.tscn")
 var forest_spawn_pos : Array = [
 	Vector2(500, 700),
 	Vector2(2700, 300),
@@ -136,6 +144,12 @@ func drop_coin(pos: Vector2) -> Node:
 	var coin_ins = coin.instantiate()
 	coin_ins.position = pos
 	return coin_ins
+
+func drop_potion(pos: Vector2) -> Node:
+	var potion_ins = potion.instantiate()
+	potion_ins.position = pos
+	potion_ins.scale = Vector2(3.0, 3.0)
+	return potion_ins
 
 func gacha(favo: int, total: int) -> bool:
 	return RandNum(1, total) <= favo

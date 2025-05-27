@@ -22,3 +22,4 @@ func _on_main_menu_button_pressed() -> void:
 	Globals.endgame.emit()
 	Globals.reset_coin.emit()
 	Globals.reset_xp.emit()
+	Globals.reset_potion.emit()

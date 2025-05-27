@@ -61,28 +61,32 @@ func start_wave(value: int):
 	if value == 1:
 		print("wave 1 started")
 		for i in portal_spawn_pos:
-			portal_spawn(10, Vector2(0, 0), i, 3.0)
+			portal_spawn(10, Vector2(0, 4), i, 3.0)
 			print("spawn at :" + str(i))
 	if value == 2:
 		print("wave 2 started")
 		for i in portal_spawn_pos:
-			portal_spawn(15, Vector2(0, 1), i, 2.5)
+			portal_spawn(15, Vector2(5, 7), i, 2.5)
 			print("spawn at :" + str(i))
+		Globals.damage_degrade = 0.8
 	if value == 3:
 		print("wave 3 started")
 		for i in portal_spawn_pos:
-			portal_spawn(20, Vector2(0, 2), i, 2.5)
+			portal_spawn(20, Vector2(8, 11), i, 2.5)
 			print("spawn at :" + str(i))
+		Globals.damage_degrade = 0.7
 	if value == 4:
 		print("wave 4 started")
 		for i in portal_spawn_pos:
-			portal_spawn(30, Vector2(0, 3), i, 2.0)
+			portal_spawn(30, Vector2(12, 14), i, 2.0)
 			print("spawn at :" + str(i))
+		Globals.damage_degrade = 0.6
 	if value == 5:
 		print("wave 5 started")
 		for i in portal_spawn_pos:
-			portal_spawn(50, Vector2(0, 3), i, 1.5)
+			portal_spawn(50, Vector2(0, 15), i, 1.5)
 			print("spawn at :" + str(i))
+		Globals.damage_degrade = 0.5
 
 func end():
 	get_tree().paused = false

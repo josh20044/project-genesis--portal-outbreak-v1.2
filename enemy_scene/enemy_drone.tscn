@@ -248,7 +248,7 @@ animations = [{
 radius = 39.0128
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulb22"]
-radius = 161.31
+radius = 101.203
 
 [node name="Enemy_drone" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
@@ -294,7 +294,6 @@ script = ExtResource("6_1lxpw")
 script = ExtResource("7_qwo1s")
 
 [node name="attack_range" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
 position = Vector2(-1, 0)

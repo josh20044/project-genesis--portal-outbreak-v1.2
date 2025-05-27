@@ -10,7 +10,7 @@ func _ready() -> void:
 	Globals.player_damage = 50
 	Globals.shot_gun_mode = false
 	Globals.shot_gun_bullet = 2
-	Globals.gun_fire_rate = 0.5
+	Globals.gun_fire_rate = 0.2
 	Globals.regen_amount = 1
 	Globals.player_speed = 200
 
@@ -91,13 +91,15 @@ func _on_shop_button_pressed() -> void:
 
 func _on_inventory_button_pressed() -> void:
 	AudioPlayer.play_sfx(0)
-	$"SHORT MESSAGE".visible = true
 	$AnimationPlayer.play("GetDownMisterPresident")
-	
-	await get_tree().create_timer(6.0).timeout
-	$"SHORT MESSAGE".visible = false
-	$AnimationPlayer.play_backwards("GetDownMisterPresident")
+	$Inventory2.visible = true
 
 
 func signal_from_stage() -> void:
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")
+
+
+func _on_inventory_2_inventory_close() -> void:
+	AudioPlayer.play_sfx(0)
+	$AnimationPlayer.play_backwards("GetDownMisterPresident")
+	$Inventory2.visible = false

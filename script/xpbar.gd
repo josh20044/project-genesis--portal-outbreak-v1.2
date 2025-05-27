@@ -47,6 +47,7 @@ func _process(delta: float) -> void:
 	ElapsedTime -= delta
 	xp_timer += delta
 	$TimerLabel.text = sec_To_minsec(ElapsedTime)
+	
 	if $"XpProgressBar80-100".value == XPCapacity:
 		$"XpProgressBar0-79".value = 0
 		$"XpProgressBar80-100".value = 0

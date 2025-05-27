@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://nogb5b5urr8m"]
+
+[ext_resource type="Script" uid="uid://b325hno4fo5gd" path="res://script/inventory_interface.gd" id="1_pohso"]
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_pohso")
+_scale = 5.0
+Row = 5
+Column = 5
+gap = 5
