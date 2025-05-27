@@ -58,6 +58,7 @@ texture_progress = ExtResource("3_nqxc4")
 tint_under = Color(0, 0, 0, 1)
 
 [node name="TextureProgressBar4" type="TextureProgressBar" parent="."]
+layout_mode = 0
 offset_left = 1007.0
 offset_top = 673.0
 offset_right = 1013.0
@@ -71,6 +72,7 @@ texture_progress = ExtResource("3_nqxc4")
 tint_under = Color(0, 0, 0, 1)
 
 [node name="TextureProgressBar5" type="TextureProgressBar" parent="."]
+layout_mode = 0
 offset_left = 1070.0
 offset_top = 674.0
 offset_right = 1076.0
@@ -84,6 +86,7 @@ texture_progress = ExtResource("3_nqxc4")
 tint_under = Color(0, 0, 0, 1)
 
 [node name="TextureProgressBar6" type="TextureProgressBar" parent="."]
+layout_mode = 0
 offset_left = 1141.0
 offset_top = 675.0
 offset_right = 1147.0

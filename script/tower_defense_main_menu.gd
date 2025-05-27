@@ -13,6 +13,8 @@ func _ready() -> void:
 	Globals.gun_fire_rate = 0.2
 	Globals.regen_amount = 1
 	Globals.player_speed = 200
+	update_image()
+	start_timer()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -103,3 +105,30 @@ func _on_inventory_2_inventory_close() -> void:
 	AudioPlayer.play_sfx(0)
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")
 	$Inventory2.visible = false
+
+var images = [
+	preload("res://Tile Assets/forest.png"),
+	preload("res://Tile Assets/laboratory.png"),
+	preload("res://Tile Assets/winter.png"),
+	preload("res://Tile Assets/beach.png"),
+	preload("res://Tile Assets/wasteland.png")
+]
+
+var current_index = 0
+var interval = 3.0
+	
+
+func start_timer():
+	var timer = Timer.new()
+	timer.wait_time = interval
+	timer.autostart = true
+	timer.one_shot = false
+	timer.timeout.connect(_on_timer_timeout)
+	add_child(timer)
+
+func _on_timer_timeout():
+	current_index = (current_index + 1) % images.size()
+	update_image()
+
+func update_image():
+	$TextureRect.texture = images[current_index]

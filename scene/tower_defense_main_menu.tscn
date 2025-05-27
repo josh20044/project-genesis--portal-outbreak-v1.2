@@ -234,11 +234,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_34mdo")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
-offset_left = 423.0
+offset_left = 503.0
 offset_top = 574.0
-offset_right = 491.0
+offset_right = 571.0
 offset_bottom = 638.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3
@@ -296,9 +301,9 @@ icon_alignment = 1
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 789.0
+offset_left = 709.0
 offset_top = 575.0
-offset_right = 857.0
+offset_right = 777.0
 offset_bottom = 639.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3
@@ -427,6 +432,20 @@ position = Vector2(1672, 169)
 [node name="Inventory2" parent="." instance=ExtResource("12_i0jb5")]
 visible = false
 layout_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -82.0
+offset_top = 11.0
+offset_right = 291.0
+offset_bottom = 124.0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 20
+text = "PROJECT GENESIS: 
+PORTAL OUTBREAK"
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="SettingsButton" to="." method="_on_settings_button_mouse_entered"]
 [connection signal="mouse_exited" from="SettingsButton" to="." method="_on_settings_button_mouse_exited"]
