@@ -299,6 +299,7 @@ radius = 91.0494
 
 [node name="Enemy_Demon_slime" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_j4w8i")

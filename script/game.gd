@@ -15,6 +15,8 @@ var portal_spawn_pos : Array
 func _ready() -> void:
 	Globals.start_wave.connect(start_wave)
 	Globals.endgame.connect(end)
+	Globals.game_paused.connect(_on_pause_menu_game_paused)
+	Globals.game_resumed.connect(_on_pause_menu_game_resumed)
 	AudioPlayer.stop_bg()
 	if Globals.stage_selected == 1:
 		$Stage.add_child(stages[0]["forest"])
@@ -46,40 +48,40 @@ func _on_pause_menu_game_paused() -> void:
 func _on_pause_menu_game_resumed() -> void:
 	get_tree().paused = false
 	
-func portal_spawn(quantity: int, variant: int, pos: Vector2, spawn_speed: float):
+func portal_spawn(quantity: int, variant: Vector2, pos: Vector2, spawn_speed: float):
 	var portal_inatance = portal.instantiate()
 	portal_inatance.player = $player
 	portal_inatance.position = pos
 	portal_inatance.to_spawn = quantity
 	portal_inatance.variant = variant
 	portal_inatance.spawn_speed = spawn_speed
-	add_child(portal_inatance)
+	$portal.add_child(portal_inatance)
 
 func start_wave(value: int):
 	if value == 1:
 		print("wave 1 started")
 		for i in portal_spawn_pos:
-			portal_spawn(10, 0, i, 3.0)
+			portal_spawn(10, Vector2(0, 0), i, 3.0)
 			print("spawn at :" + str(i))
 	if value == 2:
 		print("wave 2 started")
 		for i in portal_spawn_pos:
-			portal_spawn(15, Globals.RandNum(0, 1), i, 2.5)
+			portal_spawn(15, Vector2(0, 1), i, 2.5)
 			print("spawn at :" + str(i))
 	if value == 3:
 		print("wave 3 started")
 		for i in portal_spawn_pos:
-			portal_spawn(20, Globals.RandNum(0, 2), i, 2.5)
+			portal_spawn(20, Vector2(0, 2), i, 2.5)
 			print("spawn at :" + str(i))
 	if value == 4:
 		print("wave 4 started")
 		for i in portal_spawn_pos:
-			portal_spawn(30, Globals.RandNum(0, 3), i, 2.0)
+			portal_spawn(30, Vector2(0, 3), i, 2.0)
 			print("spawn at :" + str(i))
 	if value == 5:
 		print("wave 5 started")
 		for i in portal_spawn_pos:
-			portal_spawn(50, Globals.RandNum(0, 3), i, 1.5)
+			portal_spawn(50, Vector2(0, 3), i, 1.5)
 			print("spawn at :" + str(i))
 
 func end():

@@ -1,20 +1,42 @@
 extends Node
 
 signal stages_pressed_mainmenu
-signal  enemy_hit(id: int, damage: int)
+signal enemy_hit(id: int, damage: int)
 signal xp_increase(amount: int)
+signal coin_increase(amount: int)
 signal attack_recieved(damage: int)
 signal reset_enemy
 signal reset_portal
+signal reset_coin
+signal reset_xp
 signal endgame
 signal playbgmusic(index: int)
 signal start_wave(value: int)
+signal stage_finished
+signal game_over
+signal level_up
+
+signal game_paused
+signal game_resumed
 
 var char_selected = ""
 var stage_selected = 0
 var enemy_id = 0
 var New
 var rng = RandomNumberGenerator.new()
+var total_gold = 0
+var score = 0
+
+# player upgradables
+var player_damage = 50
+var shot_gun_mode = false
+var shot_gun_bullet = 2
+var gun_fire_rate = 0.5
+var regen_amount = 1
+var player_speed = 200
+
+var xp = preload("res://scene/xp_drop.tscn")
+var coin = preload("res://scene/coin_drop.tscn")
 
 var forest_spawn_pos : Array = [
 	Vector2(500, 700),
@@ -104,3 +126,17 @@ func Check_file(file_path: String, data: Dictionary):
 			
 func RandNum(min: int, max: int) -> int:
 	return rng.randi_range(min, max)
+
+func drop_xp(pos: Vector2) -> Node:
+	var xp_ins = xp.instantiate()
+	xp_ins.position = pos
+	return xp_ins
+	
+func drop_coin(pos: Vector2) -> Node:
+	var coin_ins = coin.instantiate()
+	coin_ins.position = pos
+	return coin_ins
+
+func gacha(favo: int, total: int) -> bool:
+	return RandNum(1, total) <= favo
+		

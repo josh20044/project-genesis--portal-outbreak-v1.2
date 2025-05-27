@@ -13,7 +13,8 @@ func Exit():
 func Update(_delta: float):
 	#print($"../../AnimatedSprite2D".frame)
 	if $"../../AnimatedSprite2D".frame >= 4:
-		Globals.xp_increase.emit(10)
+		get_tree().get_root().add_child(Globals.drop_xp($"../..".position))
+		if Globals.gacha(1, 10): get_tree().get_root().add_child(Globals.drop_coin($"../..".position))
 		$"../..".queue_free()
 
 func Physics_Update(_delta: float):

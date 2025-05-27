@@ -122,6 +122,7 @@ animations = [{
 radius = 15.0
 
 [node name="Enemy" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_f87vc")

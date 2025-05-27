@@ -12,8 +12,10 @@ func Exit():
 	pass
 
 func Update(_delta: float):
-	#shoot_delay(_delta, 0.1)
-	shot_gun(_delta, 0.1, 20)
+	if Globals.shot_gun_mode:
+		shot_gun(_delta, Globals.gun_fire_rate, Globals.shot_gun_bullet)
+	else:
+		shoot_delay(_delta,Globals.gun_fire_rate)
 
 
 func Physics_Update(_delta: float):

@@ -1,0 +1,247 @@
+[gd_scene load_steps=11 format=3 uid="uid://bto15hbwsosq5"]
+
+[ext_resource type="Script" uid="uid://tmlhyowfyttm" path="res://script/stage_cleared.gd" id="1_fhcuj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqcqg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi6gi"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s528o"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwxuh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8bul"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d21eo"]
+
+[sub_resource type="Animation" id="Animation_1k5gl"]
+resource_name = "FirstPlayWin"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalScore:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CoinsEarned:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StageCleared:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_1lag0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalScore:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CoinsEarned:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StageCleared:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eolop"]
+_data = {
+&"FirstPlayWin": SubResource("Animation_1k5gl"),
+&"RESET": SubResource("Animation_1lag0")
+}
+
+[node name="StageCleared" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fhcuj")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StageCleared" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 533.0
+offset_top = 133.0
+offset_right = 764.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 30
+text = "STAGE CLEARED"
+
+[node name="NextStageButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 279.0
+offset_right = 759.0
+offset_bottom = 332.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iqcqg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oi6gi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s528o")
+text = "NEXT STAGE
+"
+
+[node name="SelectStageButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 346.0
+offset_right = 759.0
+offset_bottom = 399.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dwxuh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oi6gi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k8bul")
+text = "SELECT STAGE"
+
+[node name="MainMenuButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 415.0
+offset_right = 759.0
+offset_bottom = 468.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d21eo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oi6gi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oi6gi")
+text = "MAIN MENU"
+
+[node name="TotalScore" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 585.0
+offset_top = 178.0
+offset_right = 708.0
+offset_bottom = 201.0
+text = "TOTAL SCORE: 0"
+
+[node name="CoinsEarned" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 579.0
+offset_top = 204.0
+offset_right = 713.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(1, 1, 0.0666667, 1)
+text = "COINS EARNED: 0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_eolop")
+}
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

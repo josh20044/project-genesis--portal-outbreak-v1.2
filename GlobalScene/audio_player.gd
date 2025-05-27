@@ -5,7 +5,8 @@ var sfx_volume = 0.0
 var sfx_arr = [
 	preload("res://Audio/minimal-pop-click-ui-2-198302.mp3"),
 	preload("res://Audio/hover-button-287656.mp3"),
-	preload("res://Audio/blaster.mp3")
+	preload("res://Audio/blaster.mp3"),
+	preload("res://Audio/retro-coin-1-236677.mp3")
 ]
 
 func play_music(music: AudioStream, volume: float):

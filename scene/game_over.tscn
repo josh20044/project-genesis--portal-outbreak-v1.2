@@ -1,0 +1,243 @@
+[gd_scene load_steps=11 format=3 uid="uid://bfn1fvwuf27s7"]
+
+[ext_resource type="Script" uid="uid://bw77fjjkt5q7t" path="res://script/game_over.gd" id="1_ytgnh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgvd1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usv4m"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tu4p"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hin7x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t5yu"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5msco"]
+
+[sub_resource type="Animation" id="Animation_6jjlf"]
+resource_name = "FirstPlay"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(561, -50), Vector2(561, 132)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalScore:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CoinsEarned:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenuButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_sp382"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameOver:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(561, 132)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TotalScore:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CoinsEarned:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenuButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r0ilo"]
+_data = {
+&"FirstPlay": SubResource("Animation_6jjlf"),
+&"RESET": SubResource("Animation_sp382")
+}
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ytgnh")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="Label" parent="."]
+layout_mode = 0
+offset_left = 561.0
+offset_top = -50.0
+offset_right = 733.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER"
+
+[node name="RetryButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 279.0
+offset_right = 759.0
+offset_bottom = 332.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tgvd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usv4m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5tu4p")
+text = "RETRY
+"
+
+[node name="SelectStageButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 531.0
+offset_top = 346.0
+offset_right = 759.0
+offset_bottom = 399.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hin7x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usv4m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8t5yu")
+text = "SELECT STAGE"
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 415.0
+offset_right = 759.0
+offset_bottom = 468.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5msco")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usv4m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_usv4m")
+text = "MAIN MENU"
+
+[node name="TotalScore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 178.0
+offset_right = 708.0
+offset_bottom = 201.0
+text = "TOTAL SCORE: 0"
+
+[node name="CoinsEarned" type="Label" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 204.0
+offset_right = 713.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(1, 1, 0.0666667, 1)
+text = "COINS EARNED: 0"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r0ilo")
+}
+
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

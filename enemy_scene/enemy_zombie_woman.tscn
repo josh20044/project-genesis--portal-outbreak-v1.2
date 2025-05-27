@@ -154,6 +154,7 @@ radius = 29.0172
 
 [node name="Enemy_zombie_woman" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_nxds4")

@@ -1,0 +1,180 @@
+[gd_scene load_steps=7 format=3 uid="uid://comxoxrvqmp33"]
+
+[ext_resource type="Script" uid="uid://db86hetdv3v7w" path="res://script/popup_skills.gd" id="1_0xsty"]
+[ext_resource type="FontFile" uid="uid://dyar6fh26gmft" path="res://Fonts/Inter Extra Bold 800.otf" id="1_ideml"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jl3xu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1mhi"]
+bg_color = Color(0.435192, 0.435192, 0.435192, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1jbt"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 10.0
+expand_margin_top = 3.0
+expand_margin_right = 10.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0odtj"]
+content_margin_left = 5.0
+content_margin_top = 4.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.31802, 0.31802, 0.31802, 1)
+
+[node name="PopupSkills" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xsty")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.47451)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillButton3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = -189.5
+offset_right = 364.0
+offset_bottom = 189.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jl3xu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w1mhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e1jbt")
+
+[node name="Label" type="Label" parent="SkillButton3"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 166.0
+offset_right = 210.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("1_ideml")
+text = "Skill Name"
+
+[node name="Label2" type="Label" parent="SkillButton3"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 197.0
+offset_right = 208.0
+offset_bottom = 358.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0odtj")
+text = "Skill Description"
+autowrap_mode = 2
+
+[node name="SkillButton2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -189.5
+offset_right = 114.0
+offset_bottom = 189.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jl3xu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w1mhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e1jbt")
+
+[node name="Label" type="Label" parent="SkillButton2"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 166.0
+offset_right = 210.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("1_ideml")
+text = "Skill Name"
+
+[node name="Label2" type="Label" parent="SkillButton2"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 197.0
+offset_right = 208.0
+offset_bottom = 358.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0odtj")
+text = "Skill Description"
+autowrap_mode = 2
+
+[node name="SkillButton1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -364.0
+offset_top = -189.5
+offset_right = -136.0
+offset_bottom = 189.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jl3xu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w1mhi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e1jbt")
+
+[node name="Label" type="Label" parent="SkillButton1"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 166.0
+offset_right = 210.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("1_ideml")
+text = "Skill Name"
+
+[node name="Label2" type="Label" parent="SkillButton1"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 197.0
+offset_right = 208.0
+offset_bottom = 358.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0odtj")
+text = "Skill Description"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 133.0
+offset_right = 727.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("1_ideml")
+theme_override_font_sizes/font_size = 20
+text = "CHOOSE A SKILL"
+
+[connection signal="pressed" from="SkillButton3" to="." method="_on_skill_button_3_pressed"]
+[connection signal="pressed" from="SkillButton2" to="." method="_on_skill_button_2_pressed"]
+[connection signal="pressed" from="SkillButton1" to="." method="_on_skill_button_1_pressed"]

@@ -7,7 +7,12 @@ func _ready() -> void:
 	$AnimationPlayer.play_backwards("GetDownMisterPresident")
 	AudioPlayer.play_music(bg_music_1, Globals.read_json_file(music_save_path)["music"])
 	Globals.connect("stages_pressed_mainmenu", signal_from_stage)
-
+	Globals.player_damage = 50
+	Globals.shot_gun_mode = false
+	Globals.shot_gun_bullet = 2
+	Globals.gun_fire_rate = 0.5
+	Globals.regen_amount = 1
+	Globals.player_speed = 200
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

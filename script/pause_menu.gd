@@ -27,3 +27,5 @@ func _on_button_3_pressed() -> void:
 	Globals.reset_enemy.emit()
 	Globals.reset_portal.emit()
 	Globals.endgame.emit()
+	Globals.reset_coin.emit()
+	Globals.reset_xp.emit()

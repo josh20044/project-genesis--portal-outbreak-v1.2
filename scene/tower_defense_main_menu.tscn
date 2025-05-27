@@ -234,9 +234,9 @@ script = ExtResource("1_34mdo")
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
-offset_left = 423.0
+offset_left = 503.0
 offset_top = 574.0
-offset_right = 491.0
+offset_right = 571.0
 offset_bottom = 638.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3
@@ -294,9 +294,9 @@ icon_alignment = 1
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 789.0
+offset_left = 709.0
 offset_top = 575.0
-offset_right = 857.0
+offset_right = 777.0
 offset_bottom = 639.0
 theme_override_constants/icon_max_width = 30
 theme_override_font_sizes/font_size = 3

@@ -21,7 +21,7 @@ signal attack_now
 
 func _ready() -> void:
 	attack_timer = attack_rate
-	
+	Globals.reset_enemy.connect(suicide)
 	Globals.enemy_hit.connect(hit)
 	$hp.value = hp
 
@@ -55,6 +55,9 @@ func _on_attack_range_body_entered(body: Node2D) -> void:
 
 func _on_attack_range_body_exited(body: Node2D) -> void:
 	player_in_range = false
+
+func suicide():
+	queue_free()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1e552"]
@@ -169,7 +172,7 @@ func Exit():
 func Update(_delta: float):
 	#print($\"../../AnimatedSprite2D\".frame)
 	if $\"../../AnimatedSprite2D\".frame >= 4:
-		Globals.xp_increase.emit(10)
+		get_tree().get_root().add_child(Globals.drop_xp($\"../..\".position))
 		$\"../..\".queue_free()
 
 func Physics_Update(_delta: float):
@@ -208,6 +211,7 @@ radius = 48.6004
 
 [node name="Enemy_zombie_one" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = SubResource("GDScript_fcmw5")

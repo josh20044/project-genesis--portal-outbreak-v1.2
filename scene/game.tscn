@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwdrijn80m0yv"]
+[gd_scene load_steps=6 format=3 uid="uid://dwdrijn80m0yv"]
 
 [ext_resource type="PackedScene" uid="uid://cc0xho78iwtym" path="res://scene/player_ui.tscn" id="1_5kiuu"]
 [ext_resource type="Script" uid="uid://b0tqa2quffrmd" path="res://script/game.gd" id="1_33cqm"]
 [ext_resource type="PackedScene" uid="uid://c5v1pr463u75r" path="res://scene/player.tscn" id="2_dbls1"]
 [ext_resource type="PackedScene" uid="uid://bobsc7t7br6hk" path="res://scene/pause_menu.tscn" id="4_xwcet"]
+[ext_resource type="PackedScene" uid="uid://comxoxrvqmp33" path="res://scene/popup_skills.tscn" id="5_p1ry8"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_33cqm")
 
 [node name="Stage" type="Node2D" parent="."]
+z_index = -1
 
 [node name="player" parent="." instance=ExtResource("2_dbls1")]
+z_index = 2
 position = Vector2(2000, 1000)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
@@ -22,6 +25,12 @@ metadata/_edit_lock_ = true
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_xwcet")]
 visible = false
+
+[node name="PopupSkills" parent="CanvasLayer" instance=ExtResource("5_p1ry8")]
+process_mode = 3
+visible = false
+
+[node name="portal" type="Node2D" parent="."]
 
 [connection signal="game_paused" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_game_paused"]
 [connection signal="game_resumed" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_game_resumed"]

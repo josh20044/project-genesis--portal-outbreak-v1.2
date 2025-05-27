@@ -13,6 +13,6 @@ func  _ready() -> void:
 	
 func _process(delta: float) -> void:
 	var dir = Input.get_vector("a", "d", "w", "s")
-	velocity = dir * 350
+	velocity = dir * Globals.player_speed
 	move_and_slide()
 	look_at(get_global_mouse_position())

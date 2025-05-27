@@ -252,6 +252,7 @@ radius = 161.31
 
 [node name="Enemy_drone" type="CharacterBody2D"]
 modulate = Color(1, 0, 0, 1)
+z_index = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_jxst1")
